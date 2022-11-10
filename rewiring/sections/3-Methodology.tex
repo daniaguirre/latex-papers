@@ -1,0 +1,48 @@
+\subsection{General operation}
+
+\begin{itemize}
+    \item Frequency of use of dynamic links during the exploration phase ($f_e$).
+    \item Frequency of visits to candidate nodes during the exploration phase ($f_n$).
+\end{itemize}
+
+\subsection{Initial conditions}
+
+\subsubsection{Initial graph} 
+
+\subsubsection{routing algorithm}
+
+Se lanzan 20 paquetes - (numero de nodos)
+
+Numero de brazo dinamicos / longitud D (routing)
+
+Two-dimensional grid graph (Kleinberg - navegability)
+Compass routing
+
+\subsubsection{Coordinator election}
+
+
+
+\subsection{Rewiring mechanism}
+
+The rewiring mechanism is a distributed process executed a determined number of cycles. A cycle of the rewiring mechanism consist of the following phases:
+
+\subsubsection{Exploration}
+
+During this phase, each node sequentially sends twenty tracer packets to arbitrary destination nodes. Packets are routed applying compass routing. Destination nodes respond to a tracer packet with an acknowledgment packet informing about the path followed by the tracer packet.
+When a node receives an acknowledgment packet, it updates its vectors $f_e$ and $f_n$ with the information. A node finishes its exploration phase when it has received all the acknowledgements packets from all destinations.
+
+\subsubsection{Exploration synchronization}
+
+This phase starts when the coordinator node has finished its exploration phase. Then it starts a PIF algorithm to spread messages asking if the rest of nodes have finished its exploration phase. When the coordinator node receives a response of all the nodes in the network,  it starts a PI algorithm to spread messages notifying that nodes must start its rewiring phase.
+
+\subsubsection{Rewiring}
+
+Each node starts its rewiring phase when it receives a notification from the coordinator. Then, the notified node uses the information in its vectors $f_e$ and $f_n$ to take a rewiring decision according to one of the following rules:
+\begin{itemize}
+    \item \textbf{Rule 1}. The node rewires its least used dynamic link (according with $f_e$) to the most visited node (according to $f_n$).
+    \item \textbf{Rule 2}. The node rewires its least used dynamic link (according with $f_e$) to the first node at distance 2 from it. Said node is the first node in $f_n$.
+\end{itemize}
+
+\subsubsection{Rewiring synchronization}
+
+Analogous to the \textit{Exploration Synchronization phase}, this phase starts when the coordinator node has finished its rewiring phase. Then it starts a PIF algorithm to spread messages asking if the rest of nodes have finished its rewiring phase. When the coordinator node receives a response of all the nodes in the network, it starts a PI algorithm to spread messages notifying that the cycle has finished and nodes must start a new cycle.

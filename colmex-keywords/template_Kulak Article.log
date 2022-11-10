@@ -1,0 +1,1238 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.26)  7 NOV 2022 01:39
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"./template_Kulak Article.tex"
+(template_Kulak Article.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-09-28> (kulakarticle.cls
+Document Class: kulakarticle 2021/10/05 Article class for KU Leuven
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/base\article
+.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.
+clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geo
+metry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/graphics\key
+val.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvt
+ex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifte
+x.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geo
+metry.cfg))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc
+.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyp
+erref.sty
+Package: hyperref 2022-09-22 v7.00t Hypertext links for LaTeX
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\lt
+xcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds
+\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\
+infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kv
+setkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/kvdefineke
+ys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\
+pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hyco
+lor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\
+letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxh
+ook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nam
+eref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/refcount\ref
+count.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/gettitlest
+ring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kv
+options.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count196
+)
+\@linkdim=\dimen147
+\Hy@linkcounter=\count197
+\Hy@pagecounter=\count198
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1
+enc.def
+File: pd1enc.def 2022-09-22 v7.00t Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\in
+tcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\e
+texcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count199
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pue
+nc.def
+File: puenc.def 2022-09-22 v7.00t Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+\stockwidth=\dimen148
+\stockheight=\dimen149
+Package hyperref Info: Bookmarks ON on input line 4410.
+\c@Hy@tempcnt=\count266
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4748.
+\XeTeXLinkMargin=\dimen150
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bit
+set.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc
+\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count267
+\Field@Width=\dimen151
+\Fld@charsize=\dimen152
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegsh
+i-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count268
+\c@Item=\count269
+\c@Hfootnote=\count270
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpd
+ftex.def
+File: hpdftex.def 2022-09-22 v7.00t Hyperref driver for pdfTeX
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/base\atverye
+nd-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count271
+\c@bookmark@seq@number=\count272
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/rerunfileche
+ck\rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/uniquecoun
+ter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip49
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/titling\titl
+ing.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip50
+\thanksmargin=\skip51
+\droptitle=\skip52
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/tools\multic
+ol.sty
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
+\c@tracingmulticols=\count273
+\mult@box=\box51
+\multicol@leftmargin=\dimen153
+\c@unbalance=\count274
+\c@collectmore=\count275
+\doublecol@number=\count276
+\multicoltolerance=\count277
+\multicolpretolerance=\count278
+\full@width=\dimen154
+\page@free=\dimen155
+\premulticols=\dimen156
+\postmulticols=\dimen157
+\multicolsep=\skip53
+\multicolbaselineskip=\skip54
+\partial@page=\box52
+\last@line=\box53
+\maxbalancingoverflow=\dimen158
+\mult@rightbox=\box54
+\mult@grightbox=\box55
+\mult@firstbox=\box56
+\mult@gfirstbox=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\c@minrows=\count279
+\c@columnbadness=\count280
+\c@finalcolumnbadness=\count281
+\last@try=\dimen159
+\multicolovershoot=\dimen160
+\multicolundershoot=\dimen161
+\mult@nat@firstbox=\box94
+\colbreak@box=\box95
+\mc@col@check@num=\count282
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/graphics\gra
+phicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/graphics\gra
+phics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/graphics\tri
+g.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg
+\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def
+\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolo
+r.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg
+\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mat
+hcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\las
+tpage.sty
+Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontend
+layer\tikz.sty
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclay
+er\pgf.sty
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilitie
+s\pgfrcs.sty
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfutil-common.tex
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfutil-common-lists.tex))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfutil-latex.def
+\pgfutil@abb=\box96
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfrcs.code.tex
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.re
+vision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclay
+er\pgfcore.sty
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemla
+yer\pgfsys.sty
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks21
+))
+\pgf@x=\dimen166
+\pgf@y=\dimen167
+\pgf@xa=\dimen168
+\pgf@ya=\dimen169
+\pgf@xb=\dimen170
+\pgf@yb=\dimen171
+\pgf@xc=\dimen172
+\pgf@yc=\dimen173
+\pgf@xd=\dimen174
+\pgf@yd=\dimen175
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count283
+\c@pgf@countb=\count284
+\c@pgf@countc=\count285
+\c@pgf@countd=\count286
+\t@pgf@toka=\toks22
+\t@pgf@tokb=\toks23
+\t@pgf@tokc=\toks24
+\pgf@sys@id@count=\count287
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count288
+\pgfsyssoftpath@bigbuffer@items=\count289
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmath.code.tex
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathcalc.code.tex
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathutil.code.tex)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathparser.code.tex
+\pgfmath@dimen=\dimen176
+\pgfmath@count=\count290
+\pgfmath@box=\box97
+\pgfmath@toks=\toks25
+\pgfmath@stack@operand=\toks26
+\pgfmath@stack@operation=\toks27
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.code.tex
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.basic.code.tex)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.trigonometric.code.tex)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.random.code.tex)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.comparison.code.tex)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.base.code.tex)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.round.code.tex)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.misc.code.tex)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.integerarithmetics.code.tex)))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count291
+))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfint.code.tex)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen177
+\pgf@picmaxx=\dimen178
+\pgf@picminy=\dimen179
+\pgf@picmaxy=\dimen180
+\pgf@pathminx=\dimen181
+\pgf@pathmaxx=\dimen182
+\pgf@pathminy=\dimen183
+\pgf@pathmaxy=\dimen184
+\pgf@xx=\dimen185
+\pgf@xy=\dimen186
+\pgf@yx=\dimen187
+\pgf@yy=\dimen188
+\pgf@zx=\dimen189
+\pgf@zy=\dimen190
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen191
+\pgf@path@lasty=\dimen192
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen193
+\pgf@shorten@start@additional=\dimen194
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box98
+\pgf@hbox=\box99
+\pgf@layerbox@main=\box100
+\pgf@picture@serial@count=\count292
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen195
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen196
+\pgf@pt@y=\dimen197
+\pgf@pt@temp=\dimen198
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen199
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen256
+\pgf@sys@shading@range@num=\count293
+\pgf@shadingcount=\count294
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box101
+))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/module
+s\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box102
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/module
+s\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatib
+ility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen257
+\pgf@nodesepend=\dimen258
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatib
+ility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilitie
+s\pgffor.sty
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilitie
+s\pgfkeys.sty
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfkeys.code.tex))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgf
+math.sty
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmath.code.tex))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmath.code.tex)
+\pgffor@iter=\dimen259
+\pgffor@skip=\dimen260
+\pgffor@stack=\toks28
+\pgffor@toks=\toks29
+))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz\tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librar
+ies\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count295
+\pgfplotmarksize=\dimen261
+)
+\tikz@lastx=\dimen262
+\tikz@lasty=\dimen263
+\tikz@lastxsaved=\dimen264
+\tikz@lastysaved=\dimen265
+\tikz@lastmovetox=\dimen266
+\tikz@lastmovetoy=\dimen267
+\tikzleveldistance=\dimen268
+\tikzsiblingdistance=\dimen269
+\tikz@figbox=\box103
+\tikz@figbox@bg=\box104
+\tikz@tempbox=\box105
+\tikz@tempbox@bg=\box106
+\tikztreelevel=\count296
+\tikznumberofchildren=\count297
+\tikznumberofcurrentchild=\count298
+\tikz@fig@count=\count299
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/module
+s\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count300
+\pgfmatrixcurrentcolumn=\count301
+\pgf@matrix@numberofcolumns=\count302
+)
+\tikz@expandcount=\count303
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librar
+ies\pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\arrowsize=\dimen270
+))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/module
+s\pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen271
+\pgfdecoratedremainingdistance=\dimen272
+\pgfdecoratedinputsegmentcompleteddistance=\dimen273
+\pgfdecoratedinputsegmentremainingdistance=\dimen274
+\pgf@decorate@distancetomove=\dimen275
+\pgf@decorate@repeatstate=\count304
+\pgfdecorationsegmentamplitude=\dimen276
+\pgfdecorationsegmentlength=\dimen277
+)
+\tikz@lib@dec@box=\box107
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librar
+ies/decorations\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@layerbox@background=\box108
+\pgf@layerboxsaved@background=\box109
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librar
+ies\pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fan
+cyhdr.sty
+Package: fancyhdr 2022/05/18 v4.0.3 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip55
+\f@nch@O@elh=\skip56
+\f@nch@O@erh=\skip57
+\f@nch@O@olh=\skip58
+\f@nch@O@orh=\skip59
+\f@nch@O@elf=\skip60
+\f@nch@O@erf=\skip61
+\f@nch@O@olf=\skip62
+\f@nch@O@orf=\skip63
+))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/caption\capt
+ion.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/caption\capt
+ion3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen278
+\captionmargin=\dimen279
+\caption@leftmargin=\dimen280
+\caption@rightmargin=\dimen281
+\caption@width=\dimen282
+\caption@indent=\dimen283
+\caption@parindent=\dimen284
+\caption@hangindent=\dimen285
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count305
+\c@continuedfloat=\count306
+Package caption Info: hyperref package is loaded.
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/caption\subc
+aption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count307
+\c@subtable=\count308
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/babel\babe
+l.sty
+Package: babel 2022/10/04 3.81 The Babel package
+\babel@savecnt=\count309
+\U@D=\dimen286
+\l@unhyphenated=\language79
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtb
+abel.def)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count310
+
+*************************************
+* Local config file bblopts.cfg used
+*
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopt
+s.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanis
+h\spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks30
+\es@quotdepth=\count311
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/generic/babel/loca
+le/es\babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3
+backend-pdftex.def
+File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count312
+\l__pdf_internal_box=\box110
+) (template_Kulak Article.aux
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+
+
+LaTeX Warning: Label `fig:papers' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:papers' multiply defined.
+
+(secciones/descriptivo.aux
+
+LaTeX Warning: Label `tb:resumen' multiply defined.
+
+)
+
+LaTeX Warning: Label `fig:kw_comunidades' multiply defined.
+
+)
+\openout1 = `"template_Kulak Article.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24408pt
+* \textheight=668.63976pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=17.3571pt
+* \topmargin=-29.59087pt
+* \headheight=42.67912pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 16.
+(template_Kulak Article.out) (template_Kulak Article.out)
+\@outlinefile=\write4
+\openout4 = `"template_Kulak Article.out"'.
+
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\
+supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count313
+\scratchdimen=\dimen287
+\scratchbox=\box111
+\nofMPsegments=\count314
+\nofMParguments=\count315
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen288
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
+\everyMPtoPDFconversion=\toks32
+)
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg
+\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfex
+t.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\eps
+topdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 16.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
+<colmex.jpg, id=86, 296.7888pt x 96.8418pt>
+File: colmex.jpg Graphic file (type jpg)
+<use colmex.jpg>
+Package pdftex.def Info: colmex.jpg  used on input line 18.
+(pdftex.def)             Requested size: 130.79579pt x 42.67912pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./datos_colmex.pdf): PDF inclusion: found PD
+F version <1.7>, but at most version <1.5> allowed
+<datos_colmex.pdf, id=87, 104.0688pt x 60.7068pt>
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 18.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 18.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+(sections/metodologia.tex) (secciones/recoleccion.tex (tablas/informacion.tex)
+<imagenes/Scopus-Analyze-Subject.jpg, id=88, 191.0337pt x 107.2005pt>
+File: imagenes/Scopus-Analyze-Subject.jpg Graphic file (type jpg)
+<use imagenes/Scopus-Analyze-Subject.jpg>
+Package pdftex.def Info: imagenes/Scopus-Analyze-Subject.jpg  used on input lin
+e 9.
+(pdftex.def)             Requested size: 240.36806pt x 134.88521pt.
+
+Overfull \hbox (21.85284pt too wide) in paragraph at lines 9--10
+ [][] 
+ []
+
+<imagenes/Scopus-Analyze-Doctype.jpg, id=89, 165.2574pt x 105.7551pt>
+File: imagenes/Scopus-Analyze-Doctype.jpg Graphic file (type jpg)
+<use imagenes/Scopus-Analyze-Doctype.jpg>
+Package pdftex.def Info: imagenes/Scopus-Analyze-Doctype.jpg  used on input lin
+e 16.
+(pdftex.def)             Requested size: 207.58878pt x 132.85031pt.
+<imagenes/Scopus-Analyze-Year.jpg, id=90, 205.9695pt x 113.4639pt>
+File: imagenes/Scopus-Analyze-Year.jpg Graphic file (type jpg)
+<use imagenes/Scopus-Analyze-Year.jpg>
+Package pdftex.def Info: imagenes/Scopus-Analyze-Year.jpg  used on input line 2
+9.
+(pdftex.def)             Requested size: 218.51521pt x 120.37502pt.
+<imagenes/Scopus-Analyze-Source.jpg, id=91, 205.9695pt x 105.996pt>
+File: imagenes/Scopus-Analyze-Source.jpg Graphic file (type jpg)
+<use imagenes/Scopus-Analyze-Source.jpg>
+Package pdftex.def Info: imagenes/Scopus-Analyze-Source.jpg  used on input line
+ 36.
+(pdftex.def)             Requested size: 218.51521pt x 112.45224pt.
+) [1
+
+{C:/Users/Ciencia de Datos/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <.
+/colmex.jpg> <./datos_colmex.pdf>]
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 27.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 46.27914pt, for example:
+(fancyhdr)                \setlength{\headheight}{46.27914pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.60002pt}.
+
+[2 <./imagenes/Scopus-Analyze-Subject.jpg> <./imagenes/Scopus-Analyze-Doctype.j
+pg> <./imagenes/Scopus-Analyze-Year.jpg> <./imagenes/Scopus-Analyze-Source.jpg>
+]
+\openout2 = `secciones/descriptivo.aux'.
+
+ (secciones/descriptivo.tex (tablas/colaboraciones.tex)
+<imagenes/Scopus-Analyze-Affiliation.jpg, id=120, 203.5605pt x 101.4189pt>
+File: imagenes/Scopus-Analyze-Affiliation.jpg Graphic file (type jpg)
+<use imagenes/Scopus-Analyze-Affiliation.jpg>
+Package pdftex.def Info: imagenes/Scopus-Analyze-Affiliation.jpg  used on input
+ line 7.
+(pdftex.def)             Requested size: 218.51521pt x 108.87616pt.
+<imagenes/Scopus-Analyze-Country.jpg, id=121, 205.2468pt x 102.8643pt>
+File: imagenes/Scopus-Analyze-Country.jpg Graphic file (type jpg)
+<use imagenes/Scopus-Analyze-Country.jpg>
+Package pdftex.def Info: imagenes/Scopus-Analyze-Country.jpg  used on input lin
+e 14.
+(pdftex.def)             Requested size: 218.51521pt x 109.51906pt.
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 23.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 46.27914pt, for example:
+(fancyhdr)                \setlength{\headheight}{46.27914pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.60002pt}.
+
+[3
+
+ <./imagenes/Scopus-Analyze-Affiliation.jpg> <./imagenes/Scopus-Analyze-Country
+.jpg>]
+<imagenes/net_institucion.png.png, id=129, 4096.30376pt x 3522.15875pt>
+File: imagenes/net_institucion.png.png Graphic file (type png)
+<use imagenes/net_institucion.png.png>
+Package pdftex.def Info: imagenes/net_institucion.png.png  used on input line 2
+8.
+(pdftex.def)             Requested size: 364.19664pt x 313.11107pt.
+<imagenes/net_pais.png, id=131, 151.2852pt x 131.0496pt>
+File: imagenes/net_pais.png Graphic file (type png)
+<use imagenes/net_pais.png>
+Package pdftex.def Info: imagenes/net_pais.png  used on input line 36.
+(pdftex.def)             Requested size: 364.19664pt x 315.48927pt.
+)
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 27.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 46.27914pt, for example:
+(fancyhdr)                \setlength{\headheight}{46.27914pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.60002pt}.
+
+[4 <./imagenes/net_institucion.png.png>]
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 27.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 46.27914pt, for example:
+(fancyhdr)                \setlength{\headheight}{46.27914pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.60002pt}.
+
+[5 <./imagenes/net_pais.png>] (secciones/palabras.tex (tablas/palabras.tex)
+<imagenes/net_kw_tiempo.png, id=146, 3015.265pt x 1800.7275pt>
+File: imagenes/net_kw_tiempo.png Graphic file (type png)
+<use imagenes/net_kw_tiempo.png>
+Package pdftex.def Info: imagenes/net_kw_tiempo.png  used on input line 7.
+(pdftex.def)             Requested size: 455.24408pt x 271.85599pt.
+<imagenes/net_kw_comunidades.png, id=147, 152.7306pt x 140.2038pt>
+File: imagenes/net_kw_comunidades.png Graphic file (type png)
+<use imagenes/net_kw_comunidades.png>
+Package pdftex.def Info: imagenes/net_kw_comunidades.png  used on input line 14
+.
+(pdftex.def)             Requested size: 455.24408pt x 417.93616pt.
+<imagenes/mapa_tematico.png, id=148, 758.835pt x 505.89pt>
+File: imagenes/mapa_tematico.png Graphic file (type png)
+<use imagenes/mapa_tematico.png>
+Package pdftex.def Info: imagenes/mapa_tematico.png  used on input line 20.
+(pdftex.def)             Requested size: 455.24408pt x 303.49773pt.
+<imagenes/evolucion_tematica.png, id=149, 234.3957pt x 101.9007pt>
+File: imagenes/evolucion_tematica.png Graphic file (type png)
+<use imagenes/evolucion_tematica.png>
+Package pdftex.def Info: imagenes/evolucion_tematica.png  used on input line 28
+.
+(pdftex.def)             Requested size: 455.24408pt x 197.9281pt.
+)
+(secciones/conceptual.tex
+<imagenes/au_productivos.png, id=150, 239.9364pt x 140.4447pt>
+File: imagenes/au_productivos.png Graphic file (type png)
+<use imagenes/au_productivos.png>
+Package pdftex.def Info: imagenes/au_productivos.png  used on input line 6.
+(pdftex.def)             Requested size: 196.66235pt x 115.12039pt.
+<imagenes/au_citados.png, id=151, 244.2726pt x 142.3719pt>
+File: imagenes/au_citados.png Graphic file (type png)
+<use imagenes/au_citados.png>
+Package pdftex.def Info: imagenes/au_citados.png  used on input line 13.
+(pdftex.def)             Requested size: 196.66235pt x 114.62541pt.
+<imagenes/au_hindex.png, id=152, 241.3818pt x 144.7809pt>
+File: imagenes/au_hindex.png Graphic file (type png)
+<use imagenes/au_hindex.png>
+Package pdftex.def Info: imagenes/au_hindex.png  used on input line 23.
+(pdftex.def)             Requested size: 364.19664pt x 218.4499pt.
+<imagenes/three_field.png, id=153, 743.77875pt x 496.85625pt>
+File: imagenes/three_field.png Graphic file (type png)
+<use imagenes/three_field.png>
+Package pdftex.def Info: imagenes/three_field.png  used on input line 31.
+(pdftex.def)             Requested size: 364.19664pt x 243.29489pt.
+<imagenes/trend_topics.png, id=154, 244.2726pt x 191.7564pt>
+File: imagenes/trend_topics.png Graphic file (type png)
+<use imagenes/trend_topics.png>
+Package pdftex.def Info: imagenes/trend_topics.png  used on input line 39.
+(pdftex.def)             Requested size: 364.19664pt x 285.92216pt.
+) 
+AED: lastpage setting LastPage
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 37.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 46.27914pt, for example:
+(fancyhdr)                \setlength{\headheight}{46.27914pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.60002pt}.
+
+[6
+
+
+ <./imagenes/net_kw_tiempo.png
+
+pdfTeX warning: pdflatex.exe (file ./imagenes/net_kw_tiempo.png): large interla
+ced PNG might cause out of memory (use non-interlaced PNG to fix this)
+>]
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 37.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 46.27914pt, for example:
+(fancyhdr)                \setlength{\headheight}{46.27914pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.60002pt}.
+
+[7 <./imagenes/net_kw_comunidades.png>]
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 37.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 46.27914pt, for example:
+(fancyhdr)                \setlength{\headheight}{46.27914pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.60002pt}.
+
+[8 <./imagenes/mapa_tematico.png (PNG copy)> <./imagenes/evolucion_tematica.png
+>]
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 37.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 46.27914pt, for example:
+(fancyhdr)                \setlength{\headheight}{46.27914pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.60002pt}.
+
+[9 <./imagenes/au_productivos.png> <./imagenes/au_citados.png> <./imagenes/au_h
+index.png>]
+File: datos_colmex.pdf Graphic file (type pdf)
+<use datos_colmex.pdf>
+Package pdftex.def Info: datos_colmex.pdf  used on input line 37.
+(pdftex.def)             Requested size: 73.16843pt x 42.67912pt.
+
+
+Package fancyhdr Warning: \headheight is too small (42.67912pt): 
+(fancyhdr)                Make it at least 46.27914pt, for example:
+(fancyhdr)                \setlength{\headheight}{46.27914pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.60002pt}.
+
+[10 <./imagenes/three_field.png> <./imagenes/trend_topics.png>]
+(template_Kulak Article.aux
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+ (secciones/descriptivo.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `"template_Kulak Article".out' has not change
+d.
+(rerunfilecheck)             Checksum: AD4FAB99A66716DC2C407B7483C2E03A;2761.
+ ) 
+Here is how much of TeX's memory you used:
+ 24085 strings out of 475385
+ 479272 string characters out of 2771678
+ 797307 words of memory out of 3000000
+ 44977 multiletter control sequences out of 15000+600000
+ 477919 words of font info for 43 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 99i,18n,94p,600b,1047s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\Ciencia de Datos\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecti1000.pk> <C:\Users\Ciencia de Datos\AppData\Local\MiKTeX\fonts/pk/lj
+four/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Ciencia de Datos\AppData\Local\M
+iKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\Ciencia de Dato
+s\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\User
+s\Ciencia de Datos\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx
+1000.pk> <C:\Users\Ciencia de Datos\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
+en/ec/dpi600\ecbx1440.pk> <C:\Users\Ciencia de Datos\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Ciencia de Datos\AppData\L
+ocal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk>
+Output written on "template_Kulak Article.pdf" (10 pages, 7592943 bytes).
+PDF statistics:
+ 483 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
+ 316 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,37 @@
+\documentclass[kulak]{kulakarticle} % options: kulak (default) or kul
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[spanish]{babel}
+
+\title{Análisis de la investigación del Colegio de México}
+
+\author{Dra. Daniela Aguirre Guerrero}
+\date{Noviembre, 2022}
+%\address{
+	%\textbf{Groep Wetenschap \& Technologie Kulak} \\
+	%Naam van de opleiding \\
+	%Naam van het vak}
+
+\begin{document}
+
+\maketitle
+
+\section{Metodología}
+\input{sections/metodologia.tex}
+
+\section{Analisis cuantitativo}
+\input{secciones/recoleccion.tex}
+\newpage
+\section{Análisis de co-autorías}
+\include{secciones/descriptivo.tex}
+
+\section{Análisis conceptual}
+\input{secciones/palabras.tex}
+
+
+
+\input{secciones/conceptual.tex}
+
+
+\end{document}
