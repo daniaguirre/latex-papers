@@ -9,26 +9,27 @@
 
 \subsubsection{Initial graph} 
 
-\subsubsection{routing algorithm}
-
-Se lanzan 20 paquetes - (numero de nodos)
-
-Numero de brazo dinamicos / longitud D (routing)
-
-Two-dimensional grid graph (Kleinberg - navegability)
-Compass routing
-
 \subsubsection{Coordinator election}
 
+As is explained in the following section, the coordinator node have two tasks: 1) to count the number of cycles of the rewiring mechanism, and 2) to coordinate the start and end of each cycle phase.
 
+\subsubsection{Compass routing}
+
+\subsubsection{Initial parameters}
+
+\begin{itemize}
+	\item 20 tracer packets.
+	\item length of dynamic links.
+	\item Vectors $f_e$, $f_n$
+\end{itemize}
 
 \subsection{Rewiring mechanism}
-\textcolor{red}{Explicar el papel del coordinador. Cuenta los ciclos ejecutados y coordina el inicio y final de las fases de exploración y recableo}
-The rewiring mechanism is a distributed process executed a determined number of cycles. A cycle of the rewiring mechanism consist of the following phases:
+
+The rewiring mechanism is a distributed process that is executed in a determined number of cycles. The coordinator node starts each cycle spreading notification messages through a PI algorithm. Each cycle consists of the following four phases:
 
 \subsubsection{Exploration}
 
-During this phase, each node sequentially sends twenty tracer packets to arbitrary destination nodes. Packets are routed applying compass routing. Destination nodes respond to a tracer packet with an acknowledgment packet containing the path followed by the tracer packet.
+Each node starts its exploration phase when it receives a notification from the coordinator node. During this phase, each node sequentially sends twenty tracer packets to arbitrary destination nodes. Packets are routed applying compass routing. Destination nodes respond to a tracer packet with an acknowledgment packet containing the path followed by the tracer packet.
 When a node receives an acknowledgment packet, it updates its vectors $f_e$ and $f_n$. A node finishes its exploration phase when it has received acknowledgments packets for its twenty tracer packets.
 
 \subsubsection{Exploration synchronization}
@@ -39,10 +40,10 @@ This phase starts when the coordinator node has finished its exploration phase. 
 
 Each node starts its rewiring phase when it receives a notification from the coordinator. Then, the notified node uses the information in its vectors $f_e$ and $f_n$ to take a rewiring decision according to one of the following rules:
 \begin{itemize}
-    \item \textbf{Rule 1}. The node rewires its least used dynamic link (according with $f_e$) to the most visited node (according to $f_n$).
-    \item \textbf{Rule 2}. The node rewires its least used dynamic link (according with $f_e$) to the first node at distance 2 from it. Said node is the first node in $f_n$.
+    \item \textbf{Rule 1}. A node rewires its least used dynamic link (according with $f_e$) to the most visited node (according to $f_n$).
+    \item \textbf{Rule 2}. A node rewires its least used dynamic link (according with $f_e$) to the first node at distance 2 from it, which is the first node in $f_n$.
 \end{itemize}
 
 \subsubsection{Rewiring synchronization}
 
-Analogous to the \textit{Exploration Synchronization phase}, this phase starts when the coordinator node has finished its rewiring phase. Then it starts a PIF algorithm to spread messages asking if the rest of nodes have finished its rewiring phase. When the coordinator node receives an acknowledgment from all the nodes in network, it checks if all cycles have been completed. If so, the rewiring mechanism finishes. Otherwise, the coordinator node starts a PI algorithm to spread messages notifying that the cycle has finished and nodes must start the \textit{Exploration phase} of a new cycle.
+Analogous to the \textit{Exploration Synchronization phase}, this phase starts when the coordinator node has finished its rewiring phase. Then it starts a PIF algorithm to spread messages asking if the rest of nodes have finished its rewiring phase. When the coordinator node receives an acknowledgment from all the nodes in network, it checks if all cycles have been completed. If so, the rewiring mechanism finishes. Otherwise, the coordinator node updates the cycle counter and starts a PI algorithm to spread messages notifying that the cycle has finished and nodes must start the \textit{Exploration phase} of a new cycle.

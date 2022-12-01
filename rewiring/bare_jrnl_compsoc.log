@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.26)  10 NOV 2022 15:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.26)  1 DEC 2022 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -224,19 +224,17 @@ LaTeX Font Info:    Trying to load font information for U+pzd on input line 478
 (C:\Users\Ciencia de Datos\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.
 fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
-) (sections/1-Introduction.tex
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 10.
-
+) (sections/2-RelatedWork.tex) (sections/3-Methodology.tex
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.53561> on input line 10.
+(Font)              <9.53561> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.6749> on input line 10.
+(Font)              <6.6749> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.7678> on input line 10.
+(Font)              <4.7678> on input line 4.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 26.
-) (sections/2-RelatedWork.tex)
-(sections/3-Methodology.tex)
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 10.
+)
 LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 512
 .
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -248,33 +246,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1{C:/Users/Ciencia de Datos/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 
-] (sections/4-ExperimentsResults.tex)
-(sections/5-Conclusions.tex) [2] (bare_jrnl_compsoc.aux) ) 
+]
+(sections/4-ExperimentsResults.tex) (sections/5-Conclusions.tex) [2]
+(bare_jrnl_compsoc.aux) ) 
 Here is how much of TeX's memory you used:
- 2545 strings out of 475385
- 44632 string characters out of 2771678
+ 2532 strings out of 475385
+ 44331 string characters out of 2771678
  399661 words of memory out of 3000000
- 23916 multiletter control sequences out of 15000+600000
- 519349 words of font info for 119 fonts, out of 8000000 for 9000
+ 23910 multiletter control sequences out of 15000+600000
+ 515586 words of font info for 112 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 34i,9n,47p,676b,395s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Ciencia de 
-Datos/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Cienc
-ia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmmi7.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ciencia de Datos/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ciencia
- de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:
-/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/
-uhvr8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1
-/urw/helvetic/uhvro8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiK
-TeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Ciencia de Datos/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Ciencia de Dato
-s/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/
-Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pf
-b>
-Output written on bare_jrnl_compsoc.pdf (2 pages, 129823 bytes).
+ 34i,9n,47p,705b,395s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKT
+eX/fonts/enc/dvips/base/8r.enc}<C:/Users/Ciencia de Datos/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ciencia de Datos/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users
+/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/
+MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Ciencia de Datos/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Ciencia de D
+atos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Use
+rs/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb
+8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw
+/palatino/uplr8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/f
+onts/type1/urw/palatino/uplri8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on bare_jrnl_compsoc.pdf (2 pages, 127711 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
