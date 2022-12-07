@@ -7,21 +7,33 @@
 
 \subsection{Initial conditions}
 
-\subsubsection{Initial graph} 
+\subsubsection{Initial topology} 
+The initial topology, is given by a 2D grid, where each node has a Von Neumann neighborhood consisting of the top, bottom, left and right neighbors, except for the nodes lying on the borders and corners of the grid, which have 3 or 2 neighbors, respectively. 
+
+This initial structure is only tied by its fixed links. Meanwhile, in this very beginning,
+the outgoing dynamic edges are initially untied. We proposed a grid of two dimensions
+because in this topology is easy to know the position of each node.
+
+\subsubsection{Compass routing}
+
+we want to travel from an initial vertex s to a destination vertex t , and that all the information available to us at any point in time is: the coordinates of our destination, our current position, and the directions of the edges incident with the vertex at which we are located. Starting at s , we will in a recursive way choose to traverse the edge of the geometric graph incident to our current position and with the closest
+slope to that of the line segment connecting the vertex of our current position to t. Ties are broken randomly.
+
+Each
+node forwards a tracer packet based on its local implementation of the compass routing algorithm
+[32]. To choose the next step of a packet, the routing is performed as follows: we draw a
+main straight line between the current node in charge and the final destination. Also, we draw
+a secondary line between the node in charge and each of its immediate neighbors. Each secondary
+line crosses the main line with a different angle. The neighbor corresponding to the
+smallest angle will be designated as the next node in the route of the tracer
+
+\subsubsection{Dynamic links}
 
 \subsubsection{Coordinator election}
 
 As is explained in the following section, the coordinator node have two tasks: 1) to count the number of cycles of the rewiring mechanism, and 2) to coordinate the start and end of each cycle phase.
 
-\subsubsection{Compass routing}
 
-\subsubsection{Initial parameters}
-
-\begin{itemize}
-	\item 20 tracer packets.
-	\item length of dynamic links.
-	\item Vectors $f_e$, $f_n$
-\end{itemize}
 
 \subsection{Rewiring mechanism}
 
