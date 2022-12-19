@@ -1,33 +1,36 @@
 \subsection{General operation}
 
 \begin{itemize}
-    \item Frequency of use of dynamic links during the exploration phase ($f_e$).
-    \item Frequency of visits to candidate nodes during the exploration phase ($f_n$).
+    \item Use frequency of dynamic links during the exploration phase ($f_e$).
+    \item Visit frequency to candidate nodes during the exploration phase ($f_n$).
 \end{itemize}
 
 \subsection{Initial conditions}
 
 \subsubsection{Initial topology} 
-The initial topology, is given by a 2D grid, where each node has a Von Neumann neighborhood consisting of the top, bottom, left and right neighbors, except for the nodes lying on the borders and corners of the grid, which have 3 or 2 neighbors, respectively. 
+The initial topology is given by a 2D grid, where each node has a Von Neumann neighborhood consisting of the top, bottom, left and right neighbors, except for the nodes lying on the corners and borders of the 2D grid, which have 2 or 3 neighbors, respectively. Links belonging to this initial topology are fixed along the rewiring mechanism. 
 
-This initial structure is only tied by its fixed links. Meanwhile, in this very beginning,
-the outgoing dynamic edges are initially untied. We proposed a grid of two dimensions
-because in this topology is easy to know the position of each node.
+In addition to fixed links, each node has a determinate number of dynamic links. Initially, these dynamic links are only connected to their owning nodes, and can be understood as loose ends. The loose end of each dynamic link is rewired along the rewiring mechanism, while the end connected to its owning node remains fixed. 
+
+It is important to mention that we proposed a 2D grid as initial topology because the rewiring mechanism is designed to work on real telecommunication networks, where the length of physical links is a restriction that must be take into account. Since the 2D grid has a natural embedding on the euclidean space it is easy to compute 
 
 \subsubsection{Compass routing}
+
+The rewiring mechanism requires a routing algorithm to explore the network and exchange messages between nodes. Since 
+The compass routing algorithm was designed to work on planar graph
+
+
 
 we want to travel from an initial vertex s to a destination vertex t , and that all the information available to us at any point in time is: the coordinates of our destination, our current position, and the directions of the edges incident with the vertex at which we are located. Starting at s , we will in a recursive way choose to traverse the edge of the geometric graph incident to our current position and with the closest
 slope to that of the line segment connecting the vertex of our current position to t. Ties are broken randomly.
 
-Each
-node forwards a tracer packet based on its local implementation of the compass routing algorithm
-[32]. To choose the next step of a packet, the routing is performed as follows: we draw a
-main straight line between the current node in charge and the final destination. Also, we draw
+To choose the next step of a packet, the routing is performed as follows: we draw a main straight line between the current node in charge and the final destination. Also, we draw
 a secondary line between the node in charge and each of its immediate neighbors. Each secondary
 line crosses the main line with a different angle. The neighbor corresponding to the
 smallest angle will be designated as the next node in the route of the tracer
 
-\subsubsection{Dynamic links}
+Each node is identified by a coordinate in the initial 2D grid as is shown in Fig. \ref{label}.
+The Compass routing algorithm was designed to on planar graphs
 
 \subsubsection{Coordinator election}
 

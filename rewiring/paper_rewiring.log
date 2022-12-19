@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.26)  7 DEC 2022 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.26)  7 DEC 2022 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -234,49 +234,57 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <4.7678> on input line 4.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 10.
-LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 55.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.02625> on input line 55.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.91833> on input line 55.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <3.51312> on input line 55.
- [1{C:/Users/Ciencia de Datos/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 
-])
-(sections/4-ExperimentsResults.tex) (sections/5-Conclusions.tex) [2]
-(paper_rewiring.aux) ) 
+LaTeX Warning: Reference `label' on page 1 undefined on input line 32.
+
+LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 49.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.02625> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.91833> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <3.51312> on input line 49.
+[1{C:/Users/Ciencia de Datos/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+
+
+]) (sections/4-ExperimentsResults.tex) (sections/5-Conclusions.tex) [2] [3
+
+]
+(paper_rewiring.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2532 strings out of 475385
- 44295 string characters out of 2771678
- 402655 words of memory out of 3000000
- 23910 multiletter control sequences out of 15000+600000
+ 2533 strings out of 475385
+ 44302 string characters out of 2771678
+ 404655 words of memory out of 3000000
+ 23911 multiletter control sequences out of 15000+600000
  515586 words of font info for 112 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,9n,47p,702b,395s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/
-fonts/enc/dvips/base/8r.enc}<C:/Users/Ciencia de Datos/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ciencia de Datos/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ci
-encia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+ 34i,9n,47p,702b,395s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base
+/8r.enc}<C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ciencia de Datos/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Cie
+ncia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ciencia de Datos/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Cien
-cia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
-<C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvet
-ic/uhvr8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/urw/helvetic/uhvro8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/
-MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Ciencia de Datos/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Ciencia de D
-atos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Use
-rs/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr
-.pfb>
-Output written on paper_rewiring.pdf (2 pages, 147759 bytes).
+lic/amsfonts/cm/cmsy7.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ciencia de Datos/AppData
+/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Ciencia de
+ Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Us
+ers/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhv
+ro8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX/fonts/type1/u
+rw/palatino/uplb8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/Programs/MiKTeX
+/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Ciencia de Datos/AppData/Local/P
+rograms/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/Ciencia de Datos/
+AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on paper_rewiring.pdf (3 pages, 149690 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
