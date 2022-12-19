@@ -1,0 +1,102 @@
+\label{sec:2-WPapproach}
+
+This section explains how paths and nodes in a CG can be represented as words of a regular language; and how this representation was applied for developing path computation algorithms in CGs \cite{AGUIRREGUERRERO2019218}. These algorithms are a key component of the WPR.
+Before presenting the word-processing approach, it is necessary to give the formal definition of CGs. 
+
+Let $\mathcal{G}=<S|R>$ be an algebraic group, where $S$ and $R$ are the set of generators and relators, respectively \cite[Section 2.2]{group_theory}. Then $\mathcal{G}$ has an associated CG, denoted by $\Gamma(\mathcal{G},S)$, where the set of vertices $V(\Gamma)$ is given by the set of group elements, and there is an edge $e\in E(\Gamma)$ from $g$ to $h$ if and only if  $g\cdot s = h$ for $g,h\in \mathcal{G}$ and $s\in S$. 
+
+\input{figures/bs4_permutations}
+
+Hereafter vertices in $V(\Gamma)$ and elements of $\mathcal{G}$ are used interchangeably, and likewise links in $E(\Gamma)$ and generators in $S$. For instance, consider the symmetric group $Sym                      _p$,  where the group elements are given by the permutations of the set $\{1,\ldots,p\}$, and the group operation is the composition of permutations. Figure \ref{fig:bs4} presents the CG of $Sym_4$ with the group generators are given by the set of permutations $S=\{(2134)$, $(1324)$, $(1243)\}$, which is known as Bubble-sort graph and denoted by $BS(4)$. Note that nodes $1234$ and $2134$ are connected through the link $(2134)$ due to $2134$ results of apply the permutation $(2134)$ to $1234$ and vice versa.
+
+\subsection{Letters as links and words as paths}
+\label{sec:words_as_paths}
+
+Assume that edges of a CG are labelled according to a bijective map
+\begin{equation}
+\label{eq:bijective_map}
+  \phi: \{S \cup S^{-1}\}\to \mathcal{A},
+\end{equation}
+where $S^{-1}$ is the set of inverses of $S$ and $\mathcal{A}$ is an alphabet. Then $\phi$ assigns each generator and its inverse to lowercase and uppercase variants of the same letter. 
+Thus every path in the CG can be represented by a unique word $w$ over $\mathcal{A}$. 
+Returning to $BS(4)$, where $S=S^{-1}$, let $\mathcal{A}=\{a,b,c\}$ be an alphabet and let $\phi$ denote the map:
+\begin{equation}
+\label{eq:mapGenAlpBS}
+\begin{matrix}
+\phi:& S & \to & \mathcal{A} \\
+ & (2134) & \to & a \\ 
+ & (1324) & \to & b \\ 
+ & (1243) & \to & c 
+\end{matrix}
+\end{equation}
+
+Figure \ref{fig:bs4:edgesLab} shows $BS(4)$ with their edges labelled according to a map (\ref{eq:bijective_map}). Then, the word $abc$ represents the sequence of edges $(2134)(1324)(1243)$ and thus a path, e.g. between $1234$ to $2341$.
+
+Let $v$ and $w$ be words over $\mathcal{A}$, such that $S$ and $\mathcal{A}$ satisfy map (\ref{eq:mapGenAlpBS}). It has that:
+\begin{itemize}
+\item The words $v$ and $w$ are called \textbf{equivalent}, i.e. $v=_\mathcal{G}w$, if they represent paths between the same pair of nodes. In Fig. \ref{fig:bs4:edgesLab}, $abc=_\mathcal{G}babca$ due to they represents paths between the same nodes, e.g. $1243$ and $2431$.
+\item The \textbf{inverse of $w$}, denoted by $w^{-1}$, is given by the reverse string of the inverse letters of $w$, e.g. if $a^{-1}=A$, $c^{-1}=C$ and $w=aC$, then $w^{-1}=cA$. Consider now that $w$ represents a path from $g$ to $h$ then $w^{-1}$ represents a path from $h$ to $g$. In the case of $BS(4)$, $abc$ represents a path from $1432$ to $4312$, meanwhile $(abc)^{-1}=cba$ represents a path from $4312$ to $1432$.
+
+\item The \textbf{reduced form of $w$}, denoted by $w_{red}$, results from removing the substrings of the form $uu^{-1}$ from $w$. The words $w$ and $w_{red}$ are equivalent, i.e. $w=_\mathcal{G}w_{red}$, and thus represent paths between the same pair of nodes. 
+Consider a path $w=abcaaca$  in Fig. \ref{fig:bs4:edgesLab}, then $w_{red}=aba$ due to $(ca)^{-1}=ac$. Since $abcaaca=_\mathcal{G}aba$, these words represent paths between the same pair of nodes, e.g. $1342$ and $4321$.
+\end{itemize}
+
+\begin{definition}
+Let $\Gamma(\mathcal{G},S)$ be a CG and $\mathcal{A}$ be an alphabet, such that $S$ and $\mathcal{A}$ satisfy map (\ref{eq:bijective_map}). Then, the \textbf{free group} over $\mathcal{A}$, denoted by $\mathcal{F}(\mathcal{A})$, consists of all reduced words over $\mathcal{A}$ including the symbol $e_\mathcal{A}$ that
+denotes the null string. 
+\end{definition}
+
+From the above definition, the language $\mathcal{F}(\mathcal{A})$ defines all paths in $\Gamma(\mathcal{G}, S)$. In particular, $e_\mathcal{A}$ denotes the empty path. It is also possible to define a language for the shortest paths as follows.
+
+\begin{definition}
+\label{def:shortlexL}
+Let $<_\mathcal{A}$ be a \textbf{lexicographical order} over $\mathcal{A}$. Let $w$ and $v$ be words over $\mathcal{A}$, it is said that $w$ is \textit{shortLex} than $v$, if $w$ is shorter than $v$, i.e. $|w|<|v|$, or $w$ and $v$ have the same length but $w$ comes before $v$ in the order $<_\mathcal{A}$.
+ The \textbf{language of the \textit{shortLex} words} in $\mathcal{F}(\mathcal{A})$ representing a unique group element in $\mathcal{G}$ is given by 
+ \begin{equation}
+ \label{eq:lan}
+ L=\{w\in \mathcal{F}(\mathcal{A}): w<_\mathcal{A} v\textnormal{, }\forall v\in \mathcal{F}(\mathcal{A}) \textnormal{ s.t. } w=_{\mathcal{G}}v\}. 
+ \end{equation}
+\end{definition}
+
+Language $L$ gives a unique representation for 
+the shortest paths  in $\Gamma(\mathcal{G},S)$. 
+Continuing with $BS(4)$, let $a<b<c$ be a lexicographic order over the alphabet $\mathcal{A}=\{a,b,c\}$, then the language of the \textit{shortLex} words of $BS(4)$ is
+
+\begin{equation}
+     \begin{split}
+    \label{eq:lan-B4}
+    L =\{&e_\mathcal{A}, a, b, c, ab, ac, ba, bc, cb, aba, abc,acb,  \\
+    &bac, bcb, cba,abac, abcb,acba, bacb,\\
+    & bcba, abacb, abcba, bacba, abacba\}.
+    \end{split}
+\end{equation}
+
+Equation (\ref{eq:lan-B4}) defines the shortest paths between each pair of nodes in $BS(4)$. These paths are called \textbf{\textit{shortLex} paths} due to they are represented by the \textit{shortLex} words. For instance, $ac$ and $ca$ represents paths between the same pair of nodes in $BS(4)$, e.g. $4213$ and $2431$. Although both paths are the shortest ones, the \textit{shortLex} path is $ac\in L$ due to $ac<_\mathcal{A} ca$. Hereafter, a path represented by a word $w$ will be denoted as $\widehat{w}$.
+
+\subsection{Words as nodes}
+
+In addition to paths, words in $L$ also give a unique representation for nodes of its related CG\footnote{For every CG, $|V(\Gamma)|=|L|$.}. This representation proceeds as follows. First, the symbol $e_\mathcal{A}$ is assigned to an arbitrary node in $V(\Gamma)$. Then, each of the remaining nodes is assigned to the word in $L$ representing the \textit{shortLex} path from $e_\mathcal{A}$ to it. From now on, a node represented by a word $w$ will be denoted as $\overline{w}$. Figure \ref{fig:BS4_nodeEdgeLabelled} shows $BS(4)$, where nodes are labelled with its corresponding word in $L$, see Eq. (\ref{eq:lan-B4}).
+
+\begin{figure}
+    \centering
+    \input{figures/bs4_labelled.tikz}
+    \caption{$BS(4)$ with  links and node labelled. Each Link is labelled with a letter in Eq. (\ref{eq:mapGenAlpBS}) representing its corresponding generator. Meanwhile, each node is labelled with a word in Eq. (\ref{eq:lan-B4}) representing the \textit{shortLex} path from $\overline{e_\mathcal{A}}$ to it.}
+    \label{fig:BS4_nodeEdgeLabelled}
+\end{figure}
+
+\subsection{Path computation algorithms}
+\label{sec:path_algorithms}
+
+The word-processing approach presented in this section allows to compute paths in CGs as follows.
+Note that there is a path between every two nodes $\overline{u}$ and $\overline{v}$ given by $\widehat{u^{-1}v}$ \footnote{The path $\widehat{u^{-1}v}$ goes from $\overline{u}$ to  $\overline{e_\mathcal{A}}$ and from  $\overline{e_\mathcal{A}}$ to  $\overline{v}$. Taking Fig. \ref{fig:BS4_nodeEdgeLabelled} as example, the path $\widehat{(bc)^{-1}ab}=\widehat{cbab}$ goes from $\overline{bc}$ to $\overline{e_\mathcal{A}}$ and from $\overline{e_\mathcal{A}}$ to $\overline{ab}$.}. From the definition of equivalent words, every word $w=_\mathcal{G}u^{-1}v$ represents a path between $\overline{u}$ and $\overline{v}$, see Section \ref{sec:words_as_paths}. Therefore the problem of compute the paths between    $\overline{u}$ and $\overline{v}$ is equivalent to compute words equivalent to $u^{-1}v$. Authors in \cite{AGUIRREGUERRERO2019218} present a set of path computation algorithms that take as input the word $u^{-1}v$, and then compute the words equivalent to $u^{-1}v$ as in shown in Table \ref{tb:algorithms}.
+The paths are computed in an ordered manner from the shortest to the largest one by using an automaton called the \textit{Word-Difference Automaton} (WDA). The WDA encodes the topological structure of the CG and recognises words representing the same pair of nodes \cite[Section 13.2.2]{derekHCGT}.
+
+\input{tables/algorithms}
+
+As is explained in the section below, the path computation algorithms presented in \cite{AGUIRREGUERRERO2019218} are used in the WPR to compute the routing paths. 
+The following lemma states the time complexity of these algorithms.
+
+\begin{lemma}
+\label{lem:pc_alg}
+The algorithms presented in \cite{AGUIRREGUERRERO2019218} are able to compute the $K$-shortest paths, the shortest disjoint paths and the set of paths avoiding nodes and edges in time $O(K\ell|Diff|)$, where $K$ denotes the number of computed paths, $\ell$ denotes the length of the largest computed path and $|Diff|$ denotes the size of the WDA. \cite[Colloraries 5-7 ]{AGUIRREGUERRERO2019218}.
+\end{lemma}

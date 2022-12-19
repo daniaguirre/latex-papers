@@ -1,0 +1,13 @@
+\begin{figure*}[ht]
+\begin{minipage}{\textwidth} 
+\centering
+\subfloat[Node $\overline{bac}$ fails and their adjacent nodes $\overline{ba}$, $\overline{bc}$ and $\overline{bacb}$ add $bac$ to their failures records, and then notify their adjacent nodes (gray nodes).]{\label{fig:4:bs_nodes_fail1}{\input{figures/bs4_fnode_1.tikz}}}\hspace{0.05\textwidth}
+\subfloat[Nodes $\overline{aba}$, $\overline{abacb}$ and $\overline{bacba}$ add $bac$ to their failures records, and then notify their adjacent nodes (gray nodes).]{\label{fig:4:bs_nodes_fail2}{\input{figures/bs4_fnode_2.tikz}}}
+
+\subfloat[Nodes $\overline{abac}$ and $\overline{abacba}$ add $bac$ to their  failures records, and then notify their adjacent nodes (gray nodes).]{\label{fig:4:bs_nodes_fail3}{\input{figures/bs4_fnode_3.tikz}}}\hspace{0.05\textwidth}
+\subfloat[None of the notified nodes updates its failures record, then the process of failure notification finishes. The blue nodes have updated their failures records through this process.]{\label{fig:4:bs_nodes_fail4}{\input{figures/bs4_fnode_4.tikz}}}
+
+\subfloat[Failures records after and before the notification of the faulty node $\overline{bac}$. Each notified node computes paths from it to the nodes adjacent to $\overline{bac}$, see Table \ref{tb:paths_computed_nodef}. ]{\label{fig:4:bs_nodes_fail_table}{\input{tables/bs4_tb_fnode_1.tex}}}\caption{Notification of the faulty node $\overline{bac}$ in $BS(4)$.}
+\label{fig:node_notif}
+\end{minipage}
+\end{figure*}

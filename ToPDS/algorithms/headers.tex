@@ -1,0 +1,14 @@
+\begin{algorithm}[htbp]
+  \caption{Prepare a message header.}
+  \label{alg:header_stc}
+\begin{algorithmic}[1]
+ \REQUIRE{A word $w=x_1x_2\ldots x_\ell\in \mathcal{F}(\mathcal{A})$ representing the routing path.}
+\ENSURE{A word $h\in \mathcal{F}(\mathcal{A})$ representing the header for a message that must be routed through the path $\widehat{w}$.}
+    \IF{$\ell=1$}
+    \STATE  $h\leftarrow e_\mathcal{A}$.
+     \ELSE
+     \STATE $h\leftarrow x_2\ldots x_\ell$.
+    \ENDIF
+\RETURN $h$.
+\end{algorithmic}
+\end{algorithm}

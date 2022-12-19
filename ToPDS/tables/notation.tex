@@ -1,0 +1,55 @@
+\begin{table}[t!]
+\centering
+\caption{Notation of the Word-Processing-based Routing.}
+	\label{tb:notation}
+\begin{tabular}[center]{|l|l|}
+\hline
+\rowcolor{gray!30}\multicolumn{1}{c|}{\multirow{1}{*}{\textbf{Parameter}}}&\multicolumn{1}{c|}{\multirow{1}{*}{\textbf{Definition}}}\\
+\hline\noalign{\smallskip}
+%\multirow{1}{*}{$\mathcal{G}=<S|R>$}   &\multirow{1}{*}{Finitely presented group with generating set $S$ and}\\
+%\multirow{1}{*}{}   &\multirow{1}{*}{set of relators $R$.}\\
+\hline
+%& \\
+\multirow{1}{*}{$\Gamma(\mathcal{G},S)$}   &\multirow{1}{*}{Cayley graph of a  group $\mathcal{G}$ with generating set $S$.}\\
+\hline
+\multirow{1}{*}{$V(\Gamma)$}   &\multirow{1}{*}{Vertices of $\Gamma(\mathcal{G},S)$.}\\
+\hline
+\multirow{1}{*}{$E(\Gamma)$}  &\multirow{1}{*}{Links of $\Gamma(\mathcal{G},S)$.}\\
+\hline
+\multirow{1}{*}{$n$}   &\multirow{1}{*}{Number of nodes in $\Gamma(\mathcal{G},S)$.}\\
+\hline
+%& \\
+\multirow{1}{*}{$\Delta$}   &\multirow{1}{*}{Regular degree of $\Gamma(\mathcal{G},S)$.}\\
+\hline
+%& \\
+\multirow{1}{*}{$D$}   &\multirow{1}{*}{Diameter of $\Gamma(\mathcal{G},S)$.}\\
+%& \\
+\hline
+%& \\
+\multirow{1}{*}{$\mathcal{A}$, where}   &\multirow{1}{*}{A lexicographically ordered alphabet defining the set}\\
+\multirow{1}{*}{$|\mathcal{A}|=\Delta$}   &\multirow{1}{*}{of port labels.}\\
+\hline
+\multirow{1}{*}{$\mathcal{F(\mathcal{A})}$}   &\multirow{1}{*}{A language over $\mathcal{A}$ defining all the paths in $\Gamma(\mathcal{G},S)$.}\\
+\hline
+%& \\
+\multirow{2}{*}{$L\subset\mathcal{F(\mathcal{A})}$}   &\multirow{1}{*}{A language over $\mathcal{A}$ defining the node labels and}\\
+\multirow{1}{*}{}   &\multirow{1}{*}{the \textit{shortLex} paths in $\Gamma(\mathcal{G},S)$.}\\
+\hline
+\multirow{1}{*}{$\widehat{w}$, where}   &\multirow{1}{*}{A path in $\Gamma(\mathcal{G},S)$, where $w$  denotes a sequence of}\\
+\multirow{1}{*}{$w\in \mathcal{F}(\mathcal{A})$}   &\multirow{1}{*}{output ports.}\\
+%& \\
+\hline
+\multirow{1}{*}{$\overline{w}$, where}   &\multirow{1}{*}{A node in $V(\Gamma)$, where $w$ denotes the node label}\\
+\multirow{1}{*}{$w\in L$}   &\multirow{1}{*}{and $\widehat{w}$ denotes the \textit{shortLex} path from $\overline{e_\mathcal{A}}$ to $\overline{w}$.}\\
+\hline
+\multirow{1}{*}{$\widehat{w}(\overline{u})$}   &\multirow{1}{*}{A path in $\Gamma(\mathcal{G},S)$, where $\overline{u}$ denotes the initial node.}\\
+\hline
+\multirow{2}{*}{$(u,v)\in L\times L$}   &\multirow{1}{*}{A link in $E(\Gamma)$, where $\overline{u}$ and $\overline{v}$ denote its incident}\\
+&\multirow{1}{*}{links.}\\
+\hline
+\multirow{1}{*}{$\mathcal{V}_u\subset L$}   &\multirow{1}{*}{Faulty nodes recorded in $\overline{u}$.}\\
+\hline
+\multirow{1}{*}{$\mathcal{E}_u\subset L\times L$}   &\multirow{1}{*}{Faulty edges recorded in $\overline{u}$.}\\
+\hline
+\end{tabular}\\
+\end{table}

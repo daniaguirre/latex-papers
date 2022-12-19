@@ -1,0 +1,40 @@
+\begin{tikzpicture}[line width=0.25mm, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{scriptsize}
+  \tikzset{VertexStyle/.style={shape=circle,minimum size=3.5pt,draw, fill=gold}}
+  %relators
+\node[minimum size=3.5pt,](r1) at (0,2) {$acac$};
+\node[minimum size=3.5pt,](r2) at (1.4,0.3) {$ababab$};
+\node[minimum size=3.5pt,](r3) at (-1.4,0.3) {$bcbcbc$};
+  %nodes
+\node[circle,minimum size=3.5pt,fill=gold](ac) at (0,3) {};
+\node[circle,minimum size=3.5pt,fill=gold](c) at (-1.4,2) {};
+\node[circle,minimum size=3.5pt,fill=gold](b) at (0,-0.6) {};
+\node[circle,minimum size=3.5pt,fill=gold](bcb) at (-2.8,-0.4) {};
+\node[circle,minimum size=3.5pt,fill=gold](cb) at (-2.8,1.2) {};
+\node[circle,minimum size=3.5pt,fill=gold](bc) at (-1.4,-1.4) {};
+\node[circle,minimum size=3.5pt,fill=gold](ba) at (1.4,-1.4) {};
+\node[circle,minimum size=3.5pt,fill=gold](ab) at (2.8,1.2) {};
+\node[circle,minimum size=3.5pt,fill=gold](a) at (1.4,2) {};
+\node[circle,minimum size=3.5pt,fill=snow](e) at (0,1) {};
+\node[circle,minimum size=3.5pt,fill=gold](aba) at (2.8,-0.4) {};
+%paths
+\draw[->] (r2) +(145:4em) arc(145:-20:4em) node[circle,midway,fill=white]{$p_{aj}$};
+\draw[<-] (r2) +(325:4em) arc(325:165:4em) node[circle,midway,fill=white]{$p_{bj}$};
+
+%edges
+ \path[-]
+ (e) edge[] node [midway, fill=white] {$a$} (a)
+(e) edge[] node [midway, fill=white] {$c$} (c)
+(ac) edge[] node [midway, fill=white] {$c$} (a)
+(cb) edge[] node [midway, fill=white] {$c$} (bcb)
+(b) edge[] node [midway, fill=white] {$c$} (bc)
+(ac) edge[] node [midway, fill=white] {$a$} (c)
+(ab) edge[] node [midway, fill=white] {$a$} (aba)
+(b) edge[] node [midway, fill=white] {$a$} (ba)
+(e) edge[] node [midway, fill=white] {$b$} (b)
+(a) edge[] node [midway, fill=white] {$b$} (ab)
+(aba) edge[] node [midway, fill=white] {$b$} (ba)
+(bc) edge[] node [midway, fill=white] {$b$} (bcb)
+(c) edge[] node [midway, fill=white] {$b$} (cb);
+\end{scriptsize}
+\end{tikzpicture}

@@ -1,0 +1,28 @@
+\begin{algorithm}[htbp]
+\caption{Notification of a faulty link.}
+\label{al:lfailure_notif}
+
+\textbf{Upon} a node $\overline{z}$ realises that that the link associated to its port $x$ has failed, node $\overline{z}$ \textbf{does}:
+
+\begin{algorithmic}[1]
+	\STATE $f\leftarrow$ the canonical form of $z\cdot x$.
+    \STATE Add $(z,f)$ to $\mathcal{E}_{z}$.
+    \STATE Send out the message \texttt{FAULTY\_LINK}$((z,f),\mathcal{V}_z, \mathcal{E}_z)$ through its active ports.
+\end{algorithmic}
+
+\textbf{Every} node 
+     $\overline{u}$ receiving a message $\texttt{FAULTY\_LINK}((e,f),\mathcal{V}_v, \mathcal{E}_v)$ through its port $x$ \textbf{does}:
+
+\begin{algorithmic}[1]
+	\STATE $update\leftarrow$ update $\mathcal{E}_u$ with $(v,f)$ \COMMENT{Algorithm \ref{al:linkf_rec}}.
+        \IF{$update$}
+    \FOR{$f\in \mathcal{V}_v\setminus\mathcal{V}_{u}$}
+    	\STATE Update $\mathcal{V}_u$ with $f$. \COMMENT{Algorithm \ref{al:nodef_rec}}
+    \ENDFOR
+    \FOR{$(v,f)\in \mathcal{E}_v\setminus\mathcal{E}_{u}$}
+    	\STATE Update $\mathcal{E}_u$ with $(e,f)$. \COMMENT{Algorithm \ref{al:linkf_rec}}
+    \ENDFOR
+    	\STATE Send out a message \texttt{FAULTY\_LINK}$((e,f),\mathcal{V}_u, \mathcal{E}_u)$ through its active ports except $x$.
+    \ENDIF
+\end{algorithmic}
+\end{algorithm}

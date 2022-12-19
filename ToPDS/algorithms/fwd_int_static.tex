@@ -1,0 +1,20 @@
+\begin{algorithm}[htbp]
+\caption{Forwarding in intermediate nodes}
+\label{al:fwd_int}
+\begin{algorithmic}[1]
+	\REQUIRE A message $\texttt{MSG}$.
+%	\REQUIRE A word $u\in L$ representing the label of the current node.
+	\STATE Read the header $h'=y_1y_2\ldots y_j$ from $\texttt{MSG}$.
+    \IF{$h'=e_\mathcal{A}$}
+    \STATE Finish.
+    \ENDIF 
+    \IF{$j>1$}
+    \STATE Prepare a new header $h\leftarrow y_2\ldots y_j$.
+    \ELSE 
+    \STATE Prepare a new header $h\leftarrow e_\mathcal{A}$.
+    \ENDIF
+    \STATE Replace the old header $h'$ by the new header $h$ in $\texttt{MSG}$.
+    \STATE Set the output $p\leftarrow y_1$.
+    \STATE Forward $\texttt{MSG}$ through $p$.
+\end{algorithmic}
+\end{algorithm}

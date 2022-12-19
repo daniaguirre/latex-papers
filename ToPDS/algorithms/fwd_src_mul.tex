@@ -1,0 +1,16 @@
+\begin{algorithm}[htbp]
+\caption{Multi-path forwarding in source nodes}
+\label{al:fwd_src_multi}
+\begin{algorithmic}[1]
+	\REQUIRE A set of messages $\texttt{MSG}_1$, $\texttt{MSG}_2$, $\ldots$, $\texttt{MSG}_K$.
+    \REQUIRE Label of the source node $u\in L$.
+	\REQUIRE Label of the destination node $v\in L$.
+	\STATE Compute a set of $K$ paths $\widehat{w}_1, \widehat{w}_2,\ldots\widehat{w}_K$ from $\overline{u}$ to $\overline{v}$, where $w_i=x_{i,1}x_{i,2}\ldots x_{i,\ell_i}$. \COMMENT{Table \ref{tb:algorithms} - Alg. B, C} 
+    \FOR{ \textbf{each} $\texttt{MSG}_i$}
+    \STATE Prepare a message header $h_i$. \COMMENT{Algorithm \ref{alg:header_stc}}
+    \STATE Attach each $h_i$ to $\texttt{MSG}_i$.
+    \STATE Set the output port $p_i\leftarrow x_{i,1}$.
+    \STATE Forward $\texttt{MSG}_i$ through $p_i$.
+    \ENDFOR
+\end{algorithmic}
+\end{algorithm}

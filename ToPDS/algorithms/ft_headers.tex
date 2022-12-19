@@ -1,0 +1,27 @@
+\begin{algorithm}[htbp]
+  \caption{Prepare a message header for fault-tolerant routing.}
+  \label{alg:header_ft}
+\begin{algorithmic}[1]
+\REQUIRE{A word $w=x_1x_2\ldots x_\ell\in \mathcal{F}(\mathcal{A})$.}
+ \REQUIRE{A symbol $t\in \{\overline{h},\widehat{h}\}$ indicating if $w$ represents a node label or a path.}
+\ENSURE{A word $h\in \mathcal{F}(\mathcal{A})$ representing the message header.}
+\IF{$t=\widehat{h}$}
+    \IF{$\ell=  1$}
+    \STATE  $h\leftarrow \widehat{h}e_\mathcal{A}$.
+     \ELSIF{$1<\ell\leq D$}
+     \STATE $h\leftarrow \widehat{h}x_2\ldots x_\ell$.
+     \ELSIF{$\ell >D$}
+     \STATE $h\leftarrow \overline{h}v$.
+    \ENDIF
+\ELSIF{$t=\overline{h}$}
+    \IF{$\ell=  1$}
+    \STATE  $h\leftarrow \widehat{h}e_\mathcal{A}$.
+     \ELSIF{$1<\ell\leq D$}
+     \STATE $h\leftarrow \widehat{h}x_2\ldots x_\ell$.
+     \ELSIF{$\ell >D$}
+     \STATE $h\leftarrow \overline{h}v$.
+    \ENDIF
+\ENDIF
+\RETURN $h$.
+\end{algorithmic}
+\end{algorithm}

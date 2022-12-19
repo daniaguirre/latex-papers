@@ -1,0 +1,14 @@
+\begin{algorithm}[htbp]
+\caption{Single-path forwarding in source nodes}
+\label{al:fwd_src_single}
+\begin{algorithmic}[1]
+	\REQUIRE A message $\texttt{MSG}$.
+    \REQUIRE Label of the source node $u\in L$.
+	\REQUIRE Label of the destination node $v\in L$.
+	\STATE Compute the shortest path $\widehat{w}$ from $\overline{u}$ to $\overline{v}$, where $w=x_1x_2\ldots x_\ell$. \COMMENT{Table \ref{tb:algorithms} - Alg. A} 
+    \STATE Prepare a message header $h$. \COMMENT{Algorithm \ref{alg:header_stc}} 
+    \STATE Attach $h$ to $\texttt{MSG}$.
+    \STATE Set the output $p\leftarrow x_1$.
+    \STATE Forward $\texttt{MSG}$ through $p$.
+\end{algorithmic}
+\end{algorithm}

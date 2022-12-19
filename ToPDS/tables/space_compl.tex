@@ -1,0 +1,48 @@
+\begin{table*}[!t]
+\begin{minipage}{\textwidth} 
+\centering
+
+\caption{Complexity of generic routing schemes for CG.}
+
+\label{tb:complexity}
+\small
+\begin{tabular}{|c|c|c|c|l|l|l|c|}
+\cline{2-8}
+\rowcolor{gray!30}\multicolumn{1}{c|}{\cellcolor{white}}&\multicolumn{4}{c|}{\textbf{Memory space requirements}}&\multicolumn{3}{c|}{\textbf{Forwarding decision time}}\\
+\cline{2-7}
+\hline
+\rowcolor{gray!30}\multirow{1}{*}{{\textbf{Routing}}}&\multirow{1}{*}{{\textbf{Message}}}&\multirow{1}{*}{{\textbf{Node}}}&\multirow{1}{*}{{\textbf{Routing}}}&\multicolumn{1}{c|}{{\textbf{Other routing}}}&\multicolumn{2}{c|}{{\textbf{Static routing}}}&\multicolumn{1}{c|}{{\textbf{Fault-tolerant  }}}\\
+\cline{6-7}
+\rowcolor{gray!30}\multirow{1}{*}{{\textbf{ scheme}}}&\multirow{1}{*}{{\textbf{header}}}&\multirow{1}{*}{{\textbf{label}}}&\multirow{1}{*}{{\textbf{table}}}&\multicolumn{1}{c|}{{\textbf{information}}}&\multicolumn{1}{c|}{\textbf{Single-path}}&\multicolumn{1}{c|}{\textbf{Multi-path}}&\multirow{1}{*}{{\textbf{routing}}}\\
+\hline
+\hline
+\rowcolor{gray!10}&&&&&\multirow{1}{*}{1) Source nodes:}&\multirow{1}{*}{1) Source nodes:}&\\
+\rowcolor{gray!10}&&&&\multicolumn{1}{l|}{\multirow{-2}{*}{1) WDA:}}&\multicolumn{1}{c|}{$O(D|Diff|)$}&\multicolumn{1}{c|}{$O(\Delta D|Diff|)$}&\\
+\rowcolor{gray!10}\multirow{1}{*}{WPR\footnote{The size of the WDA, i.e. $|Diff|$ depends on the CG's family.}}& \multicolumn{1}{c|}{\multirow{1}{*}{$O(D\log(\Delta))$}}& \multicolumn{1}{c|}{\multirow{1}{*}{$O(D\log{(\Delta)})$}}
+&\multirow{1}{*}{$O(\Delta)$}&
+\multicolumn{1}{c|}{\multirow{-2}{*}{ $O(|Diff|)$}}&
+\multirow{1}{*}{2) Intermediate}&
+\multirow{1}{*}{2) Intermediate}&\\
+\rowcolor{gray!10}\multirow{-2}{*}{}& \multicolumn{1}{c|}{\multirow{-2}{*}{}}& \multicolumn{1}{c|}{\multirow{-2}{*}{}}
+&\multirow{-2}{*}{}&
+\multirow{-2}{*}{2) Failure record:}&
+\multirow{1}{*}{nodes:}&
+\multirow{1}{*}{nodes:}&\\
+\rowcolor{gray!10}&&&&\multicolumn{1}{c|}{\multirow{-2}{*}{$O(D \log(\Delta))$}}&\multicolumn{1}{c|}{$O(1)$}&\multicolumn{1}{c|}{$O(1)$}&\multirow{-5}{*}{$O(\Delta D|Diff|)$}\\
+\multirow{1}{*}{}&\multirow{1}{*}{}&\multirow{1}{*}{}&\multirow{1}{*}{}& 
+\multirow{1}{*}{1) Dynamic}&&&\\
+\multirow{1}{*}{RCRR}&\multirow{1}{*}{$O(D\log{(n)})$}&\multirow{1}{*}{$O(\log{(n)})$}&\multirow{1}{*}{$O(n\Delta )$}& 
+\multicolumn{1}{c|}{\multirow{1}{*}{routing table:}}&\multicolumn{1}{c|}{\multirow{1}{*}{$O(1)$}}&\multicolumn{1}{c|}{\multirow{1}{*}{N/A}}&\multicolumn{1}{c|}{\multirow{1}{*}{$O(D)$}}\\
+\multirow{1}{*}{}&\multirow{-2}{*}{}&\multirow{-2}{*}{}&\multirow{-2}{*}{}& 
+\multicolumn{1}{c|}{\multirow{1}{*}{$O(n\log{(D)})$}}&\multicolumn{1}{c|}{\multirow{-2}{*}{}}&\multicolumn{1}{c|}{\multirow{-2}{*}{}}&\\
+\rowcolor{gray!10}&&&& 
+\multirow{1}{*}{1) WDA:}&&&\\
+\rowcolor{gray!10}\multirow{-2}{*}{GRWMS$^\textit{a}$}&\multirow{-2}{*}{$O(D\log{(\Delta)})$}&\multirow{-2}{*}{$O(D\log{(\Delta)})$}&\multirow{-2}{*}{$O(\Delta)$}&\multicolumn{1}{c|}{ $O(|Diff|)$}&\multicolumn{1}{c|}{\multirow{-2}{*}{$O(\Delta D|Diff|)$}}&\multicolumn{1}{c|}{\multirow{-2}{*}{N/A}}&\multirow{-2}{*}{N/A}\\
+\multirow{1}{*}{RPS\footnote{The value of the symmetric group parameter, i.e. $p$, depends on the CG's family.}}&
+\multicolumn{1}{c|}{$O(p\log{(p)})$}&\multicolumn{1}{c|}{$O(p\log{(p)})$}&\multicolumn{1}{c|}{$O(\Delta p\log{(p)})$}&
+\multicolumn{1}{c|}{N/A}&\multicolumn{1}{c|}{\multirow{1}{*}{$O(\Delta p\log{(p)})$}}&\multicolumn{1}{c|}{\multirow{1}{*}{N/A}}&
+\multicolumn{1}{c|}{N/A}\\
+\hline
+\end{tabular}
+\end{minipage}
+\end{table*}

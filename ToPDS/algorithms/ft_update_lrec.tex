@@ -1,0 +1,30 @@
+\begin{algorithm}
+\caption[Update the faulty links record]{Update the faulty links record $\mathcal{E}_u$ with the faulty link $(e,f)$.}
+\label{al:linkf_rec}
+\begin{algorithmic}[1]
+\REQUIRE Label of node $u\in L$.
+\REQUIRE Label of the faulty link $(e,f)\in L \times L$.
+\REQUIRE Faulty nodes record $\mathcal{V}_u \subset L$.
+\REQUIRE Faulty links record $\mathcal{E}_u \subset L\times L$.
+%\ENSURE{\textit{True}, if $\mathcal{E}_u$ is updated. Otherwise, \textit{False}.} 
+    \IF{$(e,f)\in \mathcal{E}_u$}
+        \RETURN False.
+    \ENDIF
+    \FOR{$v\in (e,f)$}
+    \STATE $\mathcal{E}_u'\leftarrow \{(d,e)\in\mathcal{E}_u :d=v$ OR $ e=v\}$.
+    \IF{$|\mathcal{E}_u'|=\Delta-1$}
+        \STATE $\mathcal{E}_u\leftarrow \mathcal{E}_u\setminus \mathcal{E}_u'$.
+        \STATE Add $v$ to $\mathcal{V}_u$.
+        \RETURN True.
+    \ENDIF
+    \ENDFOR
+    \FOR{$v\in \{e,f\}\setminus \mathcal{V}_{u}$}
+        \STATE $w_1\leftarrow$ the \textit{shortLex} path from $\overline{u}$ to $\overline{v}$ avoiding nodes in $\mathcal{V}_{u}$ and links in $\mathcal{E}_{u}\cup \{(e,f)\}$. \COMMENT{Table \ref{tb:algorithms} - Alg. D}
+        \STATE $w_2\leftarrow$ the \textit{shortLex} path from $\overline{u}$ to $\overline{v}$ avoiding nodes in $\mathcal{V}_{u}$ and links in $\mathcal{E}_{u}\setminus \{(e,f)\}$. \COMMENT{Table \ref{tb:algorithms} - Alg. D}
+    	\IF{$(w_1=\textit{Null})$ OR $(w_1(1)\neq w_2(1)$}
+    		\STATE Add $(e,f)$ to $\mathcal{E}_{u}$.
+        	\RETURN \textit{True}.
+    	\ENDIF
+    \ENDFOR
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,35 @@
+\begin{table}[!t]
+%\begin{minipage}{\textwidth} 
+\centering
+
+\caption{Paths computed during the failure notification of $\overline{bac}$ in $BS(4)$. If $\widehat{w_1}$ and $\widehat{w_2}$ begin at different letters (see red letters), then $\overline{bac}$ is recorded by the notified node.}
+
+\label{tb:paths_computed_nodef}
+\small
+\begin{tabular}{| c |c c| c c| c c |}
+\hline
+\rowcolor{gray!30}\multicolumn{1}{|c|}{{\textbf{Notified}}}&\multicolumn{6}{c|}{{\textbf{Nodes adjacent to $\overline{bac}$}}}\\
+\cline{2-7}
+\rowcolor{gray!30}\multicolumn{1}{|c|}{{\textbf{node}}}& \multicolumn{2}{c|}{{$\overline{ba}$}} & \multicolumn{2}{c|}{{$\overline{bc}$}} & \multicolumn{2}{c|}{{$\overline{bacb}$}}\\ 
+\hline
+\hline
+\rowcolor{gray!30}\multicolumn{1}{|c|}{\textbf{$\overline{u}$}}& {$\widehat{w_1}$} & $\widehat{w_2}$& {$\widehat{w_1}$} & $\widehat{w_2}$& {$\widehat{w_1}$} & $\widehat{w_2}$\\ 
+  \hline
+  \hline
+\rowcolor{gray!10}\multirow{1}{*}{$\overline{aba}$}&$\widehat{b}$&$\widehat{b}$ &$\widehat{bac}$ &$\widehat{bac}$ & $\widehat{\textcolor{red}{b}cb}$& $\widehat{\textcolor{red}{c}bc}$ \\   
+\multirow{1}{*}{$\overline{b}$}&$\widehat{a}$&$\widehat{a}$ &$\widehat{c}$ &$\widehat{c}$& $\widehat{acb}$ & $\widehat{abcbc}$ \\
+\rowcolor{gray!10}\multirow{1}{*}{$\overline{bcb}$}&$\widehat{bac}$&$\widehat{bca}$ &$\widehat{b}$&$\widehat{b}$ & $\widehat{aba}$& $\widehat{aba}$\\
+\multirow{1}{*}{$\overline{abacb}$}&$\widehat{bcb}$&$\widehat{bcb}$ &$\widehat{\textcolor{red}{c}ba}$ &$\widehat{\textcolor{red}{b}cbac}$ & $\widehat{c}$& $\widehat{c}$ \\
+\rowcolor{gray!10}\multirow{1}{*}{$\overline{bacba}$}&$\widehat{\textcolor{red}{a}bc}$&$\widehat{\textcolor{red}{b}abca}$ &$\widehat{\textcolor{red}{a}ba}$ &$\widehat{\textcolor{red}{b}ab}$ & $\widehat{a}$& $\widehat{a}$ \\
+\hline
+ \hline
+ \multirow{1}{*}{$\overline{ab}$}&$\widehat{ab}$&$\widehat{ab}$ &$\widehat{abac}$ &$\widehat{abac}$& $\widehat{abcb}$ & $\widehat{acbc}$ \\ 
+ \rowcolor{gray!10}\multirow{1}{*}{$\overline{abac}$}&$\widehat{cb}$&$\widehat{cb}$&$\widehat{\textcolor{red}{b}cba}$ &$\widehat{\textcolor{red}{c}bac}$& $\widehat{bc}$ & $\widehat{bc}$ \\   
+\multirow{1}{*}{$\overline{abacba}$}&$\widehat{abcb}$&$\widehat{abcb}$&$\widehat{\textcolor{red}{a}cba}$ &$\widehat{\textcolor{red}{c}bab}$   & $\widehat{ac}$ & $\widehat{ac}$ \\  
+ \rowcolor{gray!10}\multirow{1}{*}{$\overline{bcba}$}&$\widehat{abac}$ &$\widehat{abca}$&$\widehat{ab}$&$\widehat{ab}$  & $\widehat{bc}$& $\widehat{bc}$\\ \hline
+ \hline
+ \multirow{1}{*}{$\overline{abc}$}&$\widehat{acb}$&$\widehat{acb}$ &$\widehat{abcba}$  &$\widehat{acbac}$ & $\widehat{abc}$ & $\widehat{abc}$\\  
+ \rowcolor{gray!10}\multirow{1}{*}{$\overline{abcba}$}&$\widehat{abacb}$&$\widehat{abacb}$&$\widehat{bacba}$  &$\widehat{bcbab}$ & $\widehat{bac}$& $\widehat{bac}$\\ \hline
+\end{tabular}
+%\end{minipage}
+\end{table}

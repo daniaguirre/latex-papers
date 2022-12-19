@@ -1,0 +1,14 @@
+\begin{figure*}[ht]
+\begin{minipage}{\textwidth} 
+\centering
+\subfloat[Link $(aba, abac)$ fails and their incident nodes $\overline{aba}$ and $\overline{abac}$ add $(aba, abac)$ to their failures records, and then notify their adjacent nodes (gray nodes).]{\label{fig:4:bs_nodes_fail1}{\input{figures/bs4_flink_1.tikz}}}\hspace{0.05\textwidth}
+\subfloat[Nodes $ab$ and $abc$ add $(aba, abac)$ and $bac$ to their failures records, and then notify their adjacent nodes (gray nodes).]{\label{fig:4:bs_nodes_fail2}{\input{figures/bs4_flink_2.tikz}}}
+
+\subfloat[Node $\overline{a}$ adds  $bac$ to its failures records, and then notify their adjacent nodes (gray nodes).]{\label{fig:4:bs_nodes_fail2}{\input{figures/bs4_flink_3.tikz}}}\hspace{0.05\textwidth}
+\subfloat[Node $\overline{e_\mathcal{A}}$ adds $abc$  to its failures records, and then notify their adjacent nodes (gray nodes).]{\label{fig:4:bs_nodes_fail2}{\input{figures/bs4_flink_4.tikz}}}
+
+\subfloat[Failures records after and before the notification of the faulty link  $(aba,abac)$. Each notified node computes paths from it to the nodes incident and adjacent to the notified failures, see Table \ref{tb:paths_computed_linkf}. ]{\label{fig:4:bs_nodes_fail_table}{\input{tables/bs4_tb_flink_1.tex}}}\caption[Process of link failure notification in the Bubble-sort graph.]{Process of link failure notification in $BS(4)$ with the failure of node $\overline{bac}$.}
+
+\label{fig:link_notif}
+\end{minipage}
+\end{figure*}

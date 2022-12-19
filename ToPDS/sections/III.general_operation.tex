@@ -1,0 +1,45 @@
+The WPR is a routing scheme designed to work on networks whose topology is defined by Cayley Graphs (CGs). 
+Table \ref{tb:notation} summarises the basic notation used in the definition of the WPR.
+This section describes the initial configuration, general operation and properties of the WPR. The detailed operation and  evaluation of the WPR is presented in the following sections.
+
+\input{tables/notation}
+
+\subsection{Initial configuration}
+\label{sec:init_conf}
+
+The information required in each node for maintaining the WPR consists of: 
+
+\subsubsection{A routing table} It only consists of port labels. A port label is defined by a letter in the alphabet $\mathcal{A}$ representing its corresponding  generator as stated Eq. (\ref{eq:bijective_map}).
+
+\subsubsection{A node label} It is given by the word in the language of the \textit{shortLex} words, i.e. $L$, representing a path from $\overline{e_\mathcal{A}}$ to each node as stated Eq. (\ref{eq:lan}).
+
+\subsubsection{A record of node and link failures} Each node keeps a record of failures close to it. Initially this record is given by an empty set that is updated after a near failure occurs.
+
+\subsubsection{The Word-difference Automaton (WDA)} This automaton encodes the topological structure of its related CG and is used by the path computation algorithms.
+
+In the initial configuration of the WPR, the record of failures is initialized as an empty set and the WDA is copied in each node. In addition, ports and nodes must be labelled as follows.
+
+\begin{itemize}
+    \item \textbf{Port labelling}. Ports of each node must be labelled with their corresponding letter in $\mathcal{A}$, which represents a generator in $S$, see Fig. \ref{fig:bs4:edgesLab}. If it is unknown which generator is associated to each link, then it is necessary to perform a process to match links to generators. Appendix \ref{sec:anexo} presents a process of port label assignment for CG whose links are not identifying with relators.
+    \item \textbf{Node labelling}. Nodes must be labelled with words in $L$, where the label of a node represents the \textit{shortLex} path from the node $\overline{e_\mathcal{A}}$ to said node, see Fig. \ref{fig:BS4_nodeEdgeLabelled}. Algorithm 1 in \cite{wmgr} presents the steps for performing the node label assignment. 
+\end{itemize}
+
+Figure \ref{fig:BS4_nodeEdgeLabelled} shows the graph $BS(4)$ after the process of port and node labelling. The following lemma states the space complexity of ports and node labels.
+
+\begin{lemma}
+\label{lem:lables}
+A port label is given by a letter in $\mathcal{A}$, where $|\mathcal{A}|=\Delta$, thereby it can be represented by $\log(\Delta)$ bits.
+If every node is labelled with a word over $\mathcal{A}$ representing the \textit{shortLex} path from the node $\overline{e_\mathcal{A}}$ to it. Then a node label consists of at most $D$ letters in $\mathcal{A}$ and it can be represented by $O(D\log (\Delta ))$ bits \cite[Theorem 4]{AGUIRREGUERRERO2019218}.
+\end{lemma}
+
+\subsection{General operation and properties}
+
+The WPR supports static routing in modes single-path and multi-path, and fault-tolerant routing in mode single-path. In static routing, the routing paths are computed by source nodes only once for each message. In fault-tolerant routing, nodes keep a partial record of failures, and then computes routing paths avoiding nearby failures. 
+ 
+The WPR allows the following properties: 
+
+\subsubsection{Minimal routing} In spite of link and/or node failures, messages are routed always through minimal paths.
+\subsubsection{Fault-tolerance} In spite of link and/or node failures, the packet delivery is guaranteed.
+\subsubsection{Path diversity} The WPR provides multi-path routing exploiting the path diversity of CGs.
+\subsubsection{Complexity efficient}
+The forwarding algorithms have low time and space complexity. 

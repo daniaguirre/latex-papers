@@ -1,0 +1,21 @@
+\label{sec:1-introduction}
+
+\IEEEPARstart{T}{he} increasing demand of high-performance computer systems (HPCS) has imposed the challenge of designing routing schemes and large-scale network topologies that support the optimal operation of such systems. Recent trends in the design of routing schemes for large-scale networks have led to the design routing schemes together with families of network topologies. This approach ensures that routing schemes take advantage of the topological network properties \cite{bcube,dcell,fat_tree,ethernet,opticalDCN}. However, the well-known tradeoff between space and efficiency is still one of the main challenges in the design of routing schemes for large-scale networks. In addition, the design of network topologies that are scalable and robust plays a pivotal role in the optimal operation of HPCS. 
+
+This paper proposes the Word-processing based Routing (WPR), a new routing scheme for large-scale networks whose underlying topology is given by a Cayley graph (CG). Cayley graphs are a geometric representation of algebraic groups. These graphs have been used as topologies of a wide variety of communication networks \cite{arcCG,sw_cg,hierCG}, e.g. processor interconnection networks, wireless sensor networks, DCNs, etc. The reason is that their properties of node-transitivity, link-connectivity and low average distance between nodes enable high performance and robustness in large-scale networks  \cite{cits_Aguirre}. 
+
+
+In spite of these advantages, the use of CGs as underlying topologies of HPCS is limited. We argue that it is a consequence of the fact that most of communication networks, whose topologies are defined by CGs, apply traditional routing schemes based on topology-agnostic algorithms for path computation, such as the Bellman-Ford and Dijsktra algorithms. These algorithms receive the whole graph as input, which results in high space and time complexity for the routing schemes using them. 
+On the other hand, routing schemes dedicated to CGs have been designed to achieve low space and time complexity taking advantage of the aforementioned properties of CGs. However, the challenge of achieving low time and space complexity is major for generic proposals as they must work on CGs with different topological structures. 
+
+%Recent proposals in this direction include generic algorithms for computing the shortest path, the minimal paths and the disjoint paths. However, a thorough search of the relevant literature did not yield any generic algorithm for computing the $\mathtt{K}$-shortest paths, which is fundamental to design routing schemes that provide path diversity and fault-tolerance. Thereby 
+
+The state of the art  on routing schemes for CGs includes deterministic proposals \cite{nets_cg_model,Camelo14} and just only one fault-tolerant proposal \cite{Tang92}, which does not provide minimal routing and does not guarantee packet delivery. In contrast, we propose the WPR that is a generic routing scheme for CGs that guarantees packet delivery and provides: minimal routing, path diversity and fault-tolerance. As far as this author known, the WPR if the first generic routing scheme for CGs with these features. The WPR applies the path computation algorithms presented in \cite{AGUIRREGUERRERO2019218} and a novel
+mechanism of fault-tolerance, presented in this work. The fault-tolerant mechanism supports multiple failures and
+provides minimal routing in spite of nodes do not keep a global
+record of failures. This mechanism allows that the WPR can be deployed in topologies defined by subgraphs of CGs, which enables the design of scalable and robut topologies based on CGs.
+Through a space and time complexity analysis, it
+is shown that the WPR stays competitive with respect to the state
+of the art on generic routing in CGs.  
+
+The remainder of the paper is as follows: Section II introduces the theoretical framework of the word-processing approach applied in this proposal. Section III gives an overview of the WPR, while sections IV and V details the operation of the WPR for static and fault-tolerant routing, respectively. Section VI presents a comparison between the WPR and the state of art on routing schemes for CGs. Finally, Section VII provides the conclusions.

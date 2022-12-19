@@ -1,0 +1,32 @@
+\begin{algorithm}
+\caption[Update the faulty nodes record.]{Update the faulty nodes record $\mathcal{V}_u$ with the faulty node $\overline{f}$.}
+\label{al:nodef_rec}
+\begin{algorithmic}[1]
+\REQUIRE Label of node $u\in L$.
+\REQUIRE Label of the faulty node $f\in L$.
+\REQUIRE Faulty nodes record $\mathcal{V}_u \subset L$.
+\REQUIRE Faulty links record $\mathcal{E}_u \subset L\times L$.
+%\ENSURE{\textit{True}, if $\mathcal{V}_u$ is updated. Otherwise, \textit{False}.}
+	 \IF{$f\in \mathcal{V}_u$}
+        \RETURN False.
+    \ENDIF
+    \STATE $\mathcal{E}_u'\leftarrow \{(d,e)\in\mathcal{E}_u :f\in (d,e)\}$.
+    \IF{$\mathcal{E}_u'\neq\emptyset$}
+    \STATE $\mathcal{E}_u\leftarrow \mathcal{E}_u\setminus \mathcal{E}_u'$.
+    \STATE Add $f$ to $\mathcal{V}_u$.
+    \RETURN True.
+    \ENDIF
+    
+    \FOR{ 
+    $v\in \{f \cdot x:x\in \mathcal{A}\}\setminus \mathcal{V}_{u}$}
+    \STATE $w_1\leftarrow$ the \textit{shortLex} path from $\overline{u}$ to $\overline{v}$ avoiding nodes in $\mathcal{V}_{u}\cup \{f\}$ and links in $\mathcal{E}_{u}$. \COMMENT{Table \ref{tb:algorithms} - Alg. D}
+    \STATE $w_2\leftarrow$ the \textit{shortLex} path from $\overline{u}$ to $\overline{v}$ avoiding nodes in $\mathcal{V}_{u}\setminus \{f\}$ and links in $\mathcal{E}_{u}$. \COMMENT{Table \ref{tb:algorithms} - Alg. D}
+    	\IF{$(w_1=\textit{Null})$ OR $(w_1(1)\neq w_2(1))$}
+    		\STATE Add $f$ to $\mathcal{V}_{u}$.
+        	\RETURN \textit{True}.
+    	\ENDIF
+    \ENDFOR
+   
+    \RETURN \textit{False}.
+\end{algorithmic}
+\end{algorithm}

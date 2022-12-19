@@ -1,0 +1,100 @@
+\label{sec:fault_tolerant}
+
+Fault-tolerant routing operates in single-path mode. To provide fault-tolerance, every node in the network keeps a record of nearby faulty nodes and links. The routing  paths  are computed by the source node and intermediate nodes having recorded failures. To update their failure records, nodes must be notified about nearby nodes and links that failed or recovered.
+This section presents the processes of failure records update, failure notification and recovery notification. Then  the forwarding  processes is explained. In addition, examples of failure notification and fault-tolerant routing are given.
+
+\subsection{Failure record update}
+
+This section focuses on the criterion to determine whether a
+node $u$ (notified of a failure) must update its record of node or link failures, i.e. $\mathcal{V}_u$ and $\mathcal{E}_u$ respectively. The processes of failure and recovery notification are presented in the following subsections.
+
+\input{algorithms/ft_update_nrec.tex} 
+
+Algorithm \ref{al:nodef_rec} presents the steps to determine whether a node $\overline{u}$ notified about the failure of a node $\overline{f}$ must update their failure records. If so, the algorithm returns \textit{True}, otherwise, it returns \textit{False}. First, it is checked if $\overline{f}$ is already registered. If so, the algorithm finishes (lines 1-2). Otherwise, it searched for links in $\mathcal{E}_u$ that are
+adjacent to $\overline{f}$. If some links are founded, they are removed from $\mathcal{E}_u$ and $\overline{f}$ is recorded in $\mathcal{V}_u$, then the algorithm finishes (lines 3-7). Otherwise, the algorithm proceeds as follows. For each  node $\overline{v}$ adjacent to $\overline{f}$ that is not recorded (for loop at line 9), the following paths from $\overline{u}$ to $\overline{v}$ are computed:
+\begin{itemize}
+    \item The \textit{shortLex} path avoiding both the failed node $\overline{f}$ and the failures recorded in $\mathcal{V}_u$ and $\mathcal{E}_u$,
+    said path is denoted by $\widehat{w}_1$ (line 9). 
+\item The \textit{shortLex} path avoiding just the failures recorded in $\mathcal{V}_u$ and $\mathcal{E}_u$, said path is denoted by $\overline{u}$ (line 10). 
+\end{itemize}
+The failed node $\overline{f}$ is recorded in $\mathcal{V}_u$ if some of the following conditions is \textit{True} (lines 11-13):
+\begin{enumerate}
+    \item There is no path between $\overline{u}$ to $\overline{v}$, i.e. $w_1=\textit{Null}$.
+    \item The next nodes in the \textit{shortLex} paths that avoid and do not avoid $\overline{f}$ are different, i.e. $w_1(1)\neq w_2(1)$.
+\end{enumerate}
+
+\input{algorithms/ft_update_lrec.tex}
+
+Similarly to Algorithm \ref{al:nfailure_notif}, Algorithm \ref{al:lfailure_notif} determines whether a node $\overline{u}$ notified about the failure of a link $(e, f)$ must update their failure records. Notice that in the event of node or link failure, every node $\overline{u}$ will update their failure records if after failure: 1) the network is disconnected, or 2) there are destinations $\overline{v}$, such that the next node in the path from $\overline{u}$ to $\overline{v}$ have changed.
+
+\begin{lemma}
+\label{lem:update_nf}
+When a node $\overline{u}$ is notified about the failure of a node $\overline{f}$ or link $(e,f)$, it determines whether to update or not their failure records using algorithms \ref{al:nodef_rec} or \ref{al:linkf_rec}, which run in time $O(K\ell|Diff|)$, where $K$ denotes the number of computed paths and $\ell$ denotes then length of the largest of them. From Lemma \ref{lem:fdt_src_mult}, $\ell\leq D$ and $K\approx D$, thereby Algorithms \ref{al:nodef_rec} and \ref{al:linkf_rec} run in time $O(\Delta D|Diff|)$.  It follows of Lemma \ref{lem:pc_alg}.
+\end{lemma}
+
+\subsection{Failure notification}
+\label{sec:failure_not}
+
+The notification processes of faulty nodes and links are presented in algorithms \ref{al:nfailure_notif} and  \ref{al:lfailure_notif} respectively. In both cases, the failure notification begins at each node $\overline{z}$ adjacent to the faulty node or incident to the faulty link. First, the label of the faulty node or link is computed by concatenating the label of node $\overline{z}$ and the port connected to the faulty element. Then, the resulting label is added to the corresponding record of failures. Finally, whether the failure corresponds to a node or link, a message \texttt{FAULTY\_NODE} or \texttt{FAULTY\_LINK} is sent through the active ports of $\overline{z}$ except for the one connected to the faulty element.
+This message contains the label of the faulty element and the failure records of $\overline{z}$.
+
+\input{algorithms/notif_nodeF.tex}
+
+\input{algorithms/notif_linkF.tex}
+
+Each node $\overline{u}$ receiving a failure notification message (from a node $\overline{v}$) decides whether to update their failure records using Algorithm \ref{al:nodef_rec} or Algorithm \ref{al:linkf_rec} depending on the kind of message. If the failure records are not updated, node $\overline{u}$ ends its process of failure notification. Otherwise, for each failure recorded in $\overline{v}$ but not in $\overline{u}$, the corresponding faulty record is updated, and a new message of failure notification is sent through the active ports of $\overline{u}$ except for the one connected to $\overline{v}$. 
+
+\subsection{Failure notification example}
+\label{sec:failure_not_ex}
+
+\input{tables/bs4_tb_fnode_2.tex}
+
+\input{figures/notif_node_F.tex}
+This section presents an example of failure notifications in $BS(4)$. It is assumed that node $\overline{bac}$ fails first and then link $(aba,abac)$ fails. 
+Figure \ref{fig:node_notif} illustrates the notification process in $BS(4)$ when node $\overline{bac}$ fails. This process ends at 3 hops from $\overline{bac}$. Figures \ref{fig:node_notif}a-c illustrate the notification process at 1, 2, and 3 hops from $\overline{bac}$. It is important to note that nodes should record the last notification received to ignore new notifications about the same failure. Figure \ref{fig:node_notif}d shows the final state of the network, where the blue nodes have updated their failures record. Figure \ref{fig:node_notif}e summarises the information of each failure notification. Recall that notified nodes decide whether to update their failure records by comparing different computed paths (Algorithm \ref{al:nodef_rec}). Table \ref{tb:paths_computed_nodef} shows the paths that are computed by each notified node and indicates whether the faulty node must be recorded.
+
+\input{tables/bs4_tb_flink_2.tex}
+
+\input{figures/notif_link_F.tex}
+
+Similarly to Fig. \ref{fig:node_notif}, Fig. \ref{fig:link_notif} illustrates the notification process when link $(aba,abac)$ fails in $BS(4)$, where node $\overline{bac}$ has already failed. 
+Thereby the initial state of the network is shown in Fig. \ref{fig:node_notif}d, where nodes $\overline{ba}$. $\overline{bc}$, $\overline{aba}$, $\overline{abac}$, $\overline{bacb}$, $\overline{abacb}$, $\overline{bacba}$ and $\overline{abacba}$ have added $\overline{bac}$ to their failure records. The notification process of $(aba,abac)$ ends at 4 hops from it. Figures \ref{fig:link_notif}a-d illustrate the notification process at 1, 2, 3 and 4 hops from $\overline{bac}$. For each failure notification, 
+Figure  \ref{fig:link_notif}e summarises the information of failure notifications and Table \ref{tb:paths_computed_linkf} shows the paths that are computed by each notified node.
+Finally, Figure \ref{fig:nodelink_notif} shows the final state of the network and the updated failure records after node $\overline{bac}$ and link $(aba,abac)$ had failed.
+
+\input{figures/bs4_after_failures.tex}
+
+\subsection{Recovery notification}
+
+\input{algorithms/rvry_node.tex}
+
+\input{algorithms/rvry_link.tex}
+
+The notification processes of nodes and links recovered from a failure are presented in Algorithm \ref{al:nrecovery_notif} and Algorithm \ref{al:lrecovery_notif}. Similarly to a failure notification, a recovery notification is initiated in each node $\overline{z}$ adjacent to the recovered node or incident to the recovered link. First, the label of the recovered node or link is computed and removed from the corresponding record of failures. Then, whether the recovered element is a node or link, a message \texttt{RECOVERED\_NODE} or \texttt{RECOVERED\_LINK} is sent through the active ports of $\overline{z}$ except for the one connected to the recovered element. This
+message contains the label of the recovered element.
+Each node $\overline{u}$ receiving a recovery notification message (from a node $\overline{v}$) checks if the recovered element is in its record of failures. If not, node $\overline{u}$ ends the process of recovery notification. Otherwise, the label of the recovered element is removed from the corresponding record of failures, and a new recovery notification is sent through the active ports of $\overline{u}$ except for the one connected to $\overline{v}$.
+
+\subsection{Forwarding}
+
+The forwarding process in source nodes is presented in Algorithm \ref{al:fwd_src_ft}. First, it is checked if the source node has no recorded failures. If so, it computes the \textit{shortLex} path to the destination node (lines 1-2). Otherwise, it computes the \textit{shortLex} path to the destination node avoiding the recorded failures (lines 3-4). If there is no path avoiding failures, the forwarding process finishes (lines 5-6). Otherwise, the computed path will be the routing path, where the first letter in the path denotes the output port (lines 7-10). 
+
+\input{algorithms/fwd_ft_src.tex}
+
+The forwarding process in intermediate nodes is presented in Algorithm \ref{al:fwd_int_ft}. As in source nodes, it is checked if the intermediate node has no recorded failures. If so, it proceeds as forwarding in intermediate nodes for static routing (lines 1-2). Otherwise, the incoming message's header is read (line 4). If the message has reached the destination node, i.e. $h'=e_\mathcal{A}$, then the forwarding process finishes (lines 5-6). Otherwise, it proceeds as forwarding in source nodes for fault-tolerant routing (lines 7-8). 
+
+\input{algorithms/fwd_ft_int.tex}
+
+\begin{lemma}
+\label{lem:fdt_ft}
+The forwarding decision of fault-tolerant routing is taken by source and intermediate nodes using algorithms
+\ref{al:fwd_src_ft} and \ref{al:fwd_int_ft} respectively, which run in time $O(K\ell|Diff| )$, where the $K$ denotes the number of computed paths and $\ell$ denotes the length of the largest of them. From Lemma \ref{lem:fdt_src_mult}, $\ell\leq D$ and $K\approx D$, thereby the forwarding decision in fault-tolerant routing is taken in time $O(\Delta D|Diff|)$.  It follows from Lemma \ref{lem:pc_alg}.
+\end{lemma}
+
+\subsection{Routing example}
+
+Consider a network whose topology is given by the graph $BS(4)$, where node $\overline{bac}$ and link $(aba, abac)$ have failed. To support the WPR, nodes must execute the failure notification processes as is explained in sections \ref{sec:failure_not} and \ref{sec:failure_not_ex}. Figure \ref{fig:nodelink_notif} shows the final state of the network $BS(4)$ and the updated failure records after node $\overline{bac}$ and link $(aba, abac)$
+have failed. Suppose now that node $\overline{bacba}$ wants to send a single message to node $\overline{a}$. The routing process is illustrated in Fig. \ref{fig:routing_ft}  and proceeds as follows.
+
+The source node $\overline{bacba}$ executes Algorithm \ref{al:fwd_src_ft}. First, the routing path avoiding recorded failures is computed, i.e. $\widehat{abacba}$. Therefore, the upcoming message is forwarded through port $a$ and its header is $bacba$. 
+Thereby the message arrives to node $\overline{bacb}$, which executes Algorithm \ref{al:fwd_int_ft}. Since node $\overline{bacb}$ has recorded failures and it is not the destination node, the forwarding process proceeds as fault-tolerant routing in source nodes. Finally, message is forwarded to $\overline{abacb}$. This process is repeated in all the intermediate nodes until the message reaches the destination node $\overline{a}$. Notice that the routing path is computed by each intermediate node due to these nodes have recorded failures.
+\input{figures/routing_ft.tex}

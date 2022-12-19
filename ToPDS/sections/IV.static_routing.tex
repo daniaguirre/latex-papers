@@ -1,0 +1,76 @@
+\label{sec:static}
+
+Static routing applies source routing in single and multi-path modes. The routing paths are computed by source nodes just once for each message. These paths are denoted by words in $\mathcal{F}(\mathcal{A})$ representing the sequence of output ports from the source node to the destination node.
+This section presents the configuration of message headers. Then the forwarding processes is explained. Finally, static routing examples for single and multi-path modes are given.
+
+\subsection{Message headers}
+
+Let $\overline{u}$ and $\overline{v}$ be two nodes, such that $\overline{u}$ wants to send a message $\mathtt{MSG}$ to $\overline{v}$ through the routing path $\widehat{w}=x_1x_2,\ldots x_\ell$. The header of $\mathtt{MSG}$ is given by a word $h$ representing the routing path from the next node in the path to $\overline{v}$, i.e. $h=x_2\ldots x_\ell$.
+If the next node in the path is $\overline{v}$, i.e. $\widehat{w}=x_1$, then $h=e_\mathcal{A}$, where $e_\mathcal{A}$ denotes the empty path. The process of prepare a message header is presented in Algorithm \ref{alg:header_stc}.
+
+\input{algorithms/headers.tex}
+
+The following lemma states the space complexity of message headers.
+\begin{lemma}
+\label{lem:header_size_det}
+A message header defined by the WPR, in static routing, can be represented with $O(\ell\log{(\Delta)})$ bits, where $\ell$ is the length of the routing path. If the routing mode is single-path, then $\ell \leq D$ and a message is represented by $O(D\log{(\Delta)})$ bits. 
+This lemma is analogous to Lemma \ref{lem:lables}
+\end{lemma}
+
+\subsection{Forwarding}
+
+The forwarding process in source nodes proceeds as follows. In single-path forwarding, the source node computes the \textit{shortLex} path to the destination node. In multi-path forwarding, the source node decides which paths will be computed depending on the routing requirements. These paths can be 
+the $K$-shortest paths, the shortest link-disjoint paths or the shortest node-disjoint paths, see Table \ref{tb:algorithms}. 
+
+In both modes, single and multiple-path forwarding, each computed path will be a routing path, which denotes a sequence of output ports from the source to the destination node. As is explained in the above subsection, a message is associated to its routing path, where the first letter in the path denotes the output port and the remaining string denotes the message header. 
+
+Algorithms \ref{al:fwd_src_single} and \ref{al:fwd_src_multi} present the steps for single-path and multi-path forwarding in source nodes. 
+
+\input{algorithms/fwd_src_sgl.tex}
+
+\begin{lemma}
+\label{lem:fdt_src_sing}
+The forwarding decision of static routing in single-path mode is taken by source nodes using Algorithm
+\ref{al:fwd_src_single}, which runs in time
+%$O(|\mathbb{D}|\Delta_\Gamma D_\Gamma^2)$ 
+$O(D|Diff|)$
+due to Lemma \ref{lem:pc_alg}.
+\end{lemma}
+
+\input{algorithms/fwd_src_mul.tex}
+
+\begin{lemma}
+\label{lem:fdt_src_mult}
+The forwarding decision for static routing in multi-path mode is taken by source nodes using Algorithm \ref{al:fwd_src_multi}, which runs in time $O(K\ell|Diff| )$, where the $K$ denotes the number of computed paths and $\ell$ denotes the length of the largest of them. If the routing paths are disjoint, then $\ell\leq D$ and $K\approx D$, thereby the forwarding decision in source nodes is takes in time $O(\Delta D|Diff| )$. 
+It follows from Lemma  \ref{lem:pc_alg}.
+\end{lemma}
+
+The forwarding process in intermediate nodes is the same for both modes, single-path and multi-path forwarding. This process consists in reading the header of the incoming message, where first letter denotes the output port and the remaining string denotes the new message header.
+Algorithm \ref{al:fwd_int} presents the steps for forwarding in intermediate nodes. 
+
+\input{algorithms/fwd_int_static.tex}
+
+\begin{lemma}
+\label{lem:fdt_src_int}
+The forwarding decision for static routing in intermediate nodes is taken using Algorithm \ref{al:fwd_int}, which runs in time $O(1)$ due to the next node in the path is encoded in the message header and thus no path is computed.
+\end{lemma}
+
+\input{figures/routing_static.tex}
+
+\subsection{Routing example: Static routing in single-path mode}
+
+Consider a network whose topology is given by the graph $BS(4)$, which is defined in Section \ref{sec:2-WPapproach}. To support the WPR, ports and nodes in $BS(4)$ must be labelled as is explained in Section \ref{sec:init_conf}, Fig. \ref{fig:BS4_nodeEdgeLabelled} shows $BS(4)$ after the labelling processes. Suppose now that node $\overline{bacba}$ wants to send a single message to node $\overline{a}$. The routing process is illustrated in Fig. \ref{fig:routing_static}  and proceeds as follows.
+
+The source node $\overline{bacba}$ executes Algorithm \ref{al:fwd_src_single}. First, the routing path $\widehat{abacba}$ is computed, and then  Algorithm \ref{alg:header_stc} is executed to compute the upcoming message header, i.e. $bacba$. Finally, the message is forwarded through the port given by the first letter in the routing path, i.e. $a$.
+Thereby the message arrives to node $\overline{bacb}$, which executes Algorithm \ref{al:fwd_int}. The algorithm reads the incoming message header, i.e $bacba$, and selects the new upcoming message header $acba$ and output port $b$. Finally, message is forwarded to $\overline{bac}$. This process is repeated in all the intermediate nodes until the message reaches the destination node $\overline{a}$.
+
+\input{figures/routing_mpath.tex}
+
+\subsection{Routing example: Static routing in multi-path mode}
+
+Consider now the same network as in the above example and suppose that node $\overline{bacba}$ wants to send messages to node $\overline{a}$ through the shortest node-disjoint paths. The routing process is illustrated in Fig. \ref{fig:routing_mpath}  and proceeds as follows.
+
+%The forwarding process in the source node is defined by Algorithm \ref{al:fwd_src_single} and in the intermediates nodes by Algorithm \ref{al:fwd_int}. 
+
+The source node $\overline{bacba}$ executes Algorithm \ref{al:fwd_src_multi}. First, the routing paths $\widehat{abacba}$, $\widehat{bacbac}$ and $\widehat{cabacb}$ are computed. Then, for each message, Algorithm \ref{alg:header_stc} is executed to compute the upcoming message header, i.e. $bacba$, $acbac$ and $abacb$ respectively. Finally, each message is forwarded through the port given by the first letter in its routing path, i.e. $a$, $b$ and $c$, repectively. 
+Thereby the messages arrives to nodes $\overline{bacb}$, $\overline{bcba}$ and $\overline{abacba}$. Each of these nodes executes Algorithm \ref{al:fwd_int} which reads the incoming message header and selects the new upcoming message header and output port. Finally, message is forwarded to the output port. This process is repeated in all the intermediate nodes until the messages reach the destination node $\overline{a}$.

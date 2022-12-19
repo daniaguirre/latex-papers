@@ -1,0 +1,21 @@
+\begin{algorithm}[htbp]
+\caption{Notification of a recovered link.}
+\label{al:lrecovery_notif}
+
+\textbf{Upon} a node $\overline{z}$ realises that the link associated to its port $x$ has failed, node $\overline{z}$ \textbf{does}:
+     
+\begin{algorithmic}[1]
+	\STATE $t\leftarrow$ the canonical form of $z\cdot x$.
+    \STATE Remove $(z,t)$ from $\mathcal{E}_{z}$.
+    \STATE Send out the message $\texttt{RECOVERED\_LINK}(z,t)$ through its active ports except $x$.
+\end{algorithmic}
+
+\textbf{Every} node  $\overline{u}$ receiving a message $\texttt{RECOVERED\_LINK}(r,t)$ through its port $x$ \textbf{does}:
+
+\begin{algorithmic}[1]
+	\IF{$(r,t)\in \mathcal{E}_{u}$}
+    \STATE Remove $(r,t)$ from $\mathcal{E}_{u}.$
+    \STATE Send out the message $\texttt{RECOVERED\_LINK}(r,t)$ through its active ports except $x$.
+    \ENDIF
+\end{algorithmic}
+\end{algorithm}

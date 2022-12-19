@@ -1,0 +1,251 @@
+\documentclass[journal]{IEEEtran}
+% *** MISC UTILITY PACKAGES ***
+\usepackage{multirow}
+% *** CITATION PACKAGES ***
+\usepackage{cite}
+% *** GRAPHICS RELATED PACKAGES ***
+\ifCLASSINFOpdf
+\else
+\fi
+% *** MATH PACKAGES ***
+\usepackage{amsfonts}
+\usepackage{amsmath}
+% *** SPECIALIZED LIST PACKAGES *** %
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+% *** ALIGNMENT PACKAGES ***
+% *** SUBFIGURE PACKAGES ***
+\ifCLASSOPTIONcompsoc
+  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+  \usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+
+
+\usepackage[table,dvipsnames]{xcolor}
+
+\usepackage{enumitem}
+
+% Need it for floating environment
+\usepackage{footnote}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{tkz-berge}
+\usetikzlibrary{positioning,shapes,backgrounds,decorations.fractals ,decorations.pathmorphing,shadows,arrows.meta,fit}
+\usepackage{pgfplots,pgfplotstable}
+% **************************************************************************************************** EXTRAS: TIKZ figures
+%  tomato
+%  gold
+%  gray33
+%  chartreuse
+% (x<der,y<arriba)
+\definecolor{mygreen}{HTML}{269926}
+\definecolor{tomato}{RGB}{221,74,44} % HEX #dd4a2c
+\definecolor{sthlmBlue}{RGB}{0,110,191} % HEX #006ebf
+\definecolor{gold}{RGB}{252,191,10}
+\definecolor{snow}{HTML}{000000}
+\colorlet{mintgreen}{green!50!black!50}
+
+
+
+\usepackage{tabularx} % better tables
+    \setlength{\extrarowheight}{3pt} % increase table row height
+\newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering} % to be used with each float for alignment
+\usepackage{caption}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%--------- New Theorems ---------%
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+
+%-------- Definitions --------%
+\def\shortlex{\textit{ShortLex}\xspace}
+\begin{document}
+ 
+\title{WPR: A Fault-tolerant Routing Scheme for\\Cayley Graphs}
+
+\author{Daniela~Aguirre-Guerrero,~
+        Llu\'is F\`abrega,~and~
+        Pere~Vil\`a~and~Enrique~Rodriguez-Colina% <-this % stops a space
+\thanks{D. Aguirre-Guerrero is with the Universidad Aut\'onoma Metropolitana, Unidad Cuajimalpa, Cuajimalpa 52005, Mexico (e-mail: d.aguirre@correo.ler.uam.mx).}
+
+\thanks{Llu\'is F\`abrega, 
+        and Pere Vil\`a are with the Universitat de Girona, Girona 17071, Spain (e-mail: luis.fabrega@udg.edu; pere.vila@udg.edu).}
+\thanks{E. Rodriguez-Colina is with the Universidad Aut\'onoma Metropolitana, Unidad Iztapalapa, Iztapalapa, Mexico City 09340, Mexico (e-mail: erod@xanum.uam.mx).}% <-this % stops a space
+%\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}
+}
+
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces betweeFault is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+ 
+\maketitle
+ 
+\begin{abstract}
+The abstract goes here.
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+IEEE, IEEEtran, journal, \LaTeX, paper, template.
+\end{IEEEkeywords}
+
+
+
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+\input{sections/I.introduction.tex}
+
+\section{The Word-Processing Approach}
+\input{sections/II.wp_approach.tex}
+
+\section{Overview of the WPR}
+\input{sections/III.general_operation.tex}
+
+\section{Static Routing}
+\input{sections/IV.static_routing.tex}
+
+\section{Fault-tolerant Routing}
+\input{sections/V.ft_routing.tex}
+
+\section{Comparison with related work}
+\input{sections/VII.complexity.tex}
+
+%\section{Empirical Results}
+%\input{sections/VIII.empirical.tex}
+
+\section{Conclusions}
+\input{sections/IX.conclusions.tex}
+%*********** Appendices ***********
+%\appendices
+%\section{Port Label Assignment}
+%\input{appendices/appA.tex}
+
+
+% use section* for acknowledgment
+\section*{Acknowledgment}
+\input{sections/acknowledgment.tex}
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{references}
+\bibliography{IEEEabrv,references}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+%\begin{thebibliography}{1}
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+%\end{thebibliography}
+
+% biography section
+% 
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+% or if you just want to reserve a space for a photo:
+
+\begin{IEEEbiography}{Daniela Aguirre-Guerrero}
+Biography text here.
+\end{IEEEbiography}
+
+% if you will not have a photo at all:
+\begin{IEEEbiographynophoto}{Llu\'is F\`abrega}
+Biography text here.
+\end{IEEEbiographynophoto}
+
+% insert where needed to balance the two columns on the last page with
+% biographies
+%\newpage
+
+\begin{IEEEbiographynophoto}{Pere Vil\`a}
+Biography text here.
+\end{IEEEbiographynophoto}
+
+\begin{IEEEbiographynophoto}{Enrique Rodriguez-Colina}
+Biography text here.
+\end{IEEEbiographynophoto}
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+
+%\vfill
+
+% Can be used to pull up biographies so that the bottom of the last one
+% is flush with the other column.
+%\enlargethispage{-5in}
+
+
+
+% that's all folks
+\end{document}
+
+

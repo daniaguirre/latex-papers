@@ -1,0 +1,22 @@
+\begin{algorithm}[htbp]
+\caption{Fault-tolerant forwarding in intermediate nodes}
+\label{al:fwd_int_ft}
+\begin{algorithmic}[1]
+	\REQUIRE A message $\texttt{MSG}$.
+    \REQUIRE A word $u\in L$ representing the intermediate node label.
+    \REQUIRE A set $\mathcal{V}_u \subset L$ representing the faulty nodes record of node $\overline{u}$.
+    \REQUIRE A set $\mathcal{E}_u \subset L\times L$ representing the faulty links record of node $\overline{u}$.
+    \IF{$\mathcal{V}_u = \emptyset$ or $\mathcal{E}_u  = \emptyset$ 
+    }
+    \STATE Forward $\texttt{MSG}$ as static routing in intermediate nodes. \COMMENT{Algorithm \ref{al:fwd_int}} 
+    \ELSE
+    \STATE Read the header $h'=y_1y_2\ldots y_j$ from \texttt{MSG}.
+    \IF{$h'= e_\mathcal{A}$}
+    \STATE Finish.
+    \ELSE
+    \STATE Forward $\texttt{MSG}$ as fault-tolerant routing in source nodes. \COMMENT{Algorithm \ref{al:fwd_src_ft}}
+    \ENDIF
+    
+    \ENDIF   
+\end{algorithmic}
+\end{algorithm} 

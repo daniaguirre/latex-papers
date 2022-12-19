@@ -1,0 +1,197 @@
+\begin{tikzpicture}[line width=0.25mm, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{scriptsize}
+%*************** grafica 2 ***************%
+
+%*************** edges de la grafica *********************************
+% GENERATOR a
+% e - a
+\draw[color=snow] (0,5) -- (5,5) node [midway,above] {$a$};
+% c - ac
+\draw[color=snow] (0,0)-- (5,0) node [midway,below] {$a$};
+
+% cb - cba
+\draw[color=snow] (0.5,0.5)-- (1.5,0.5) node [midway,above] {$a$};
+% bcb - bcba
+\draw[color=snow] (0.5,1.5)-- (1.5,1.5) node [midway,below] {$a$};
+% bc - bac
+%\draw[color=snow,dashed] (0.6,3.5) -- (1.4,3.5) node [midway,above,color=snow] {$a$};
+% b - ba
+\draw[color=snow] (0.5,4.5)-- (1.5,4.5) node [midway,below] {$a$};
+
+% acb - acba
+\draw[color=snow] (3.5,0.5)-- (4.5,0.5) node [midway,above] {$a$};
+% abcb - abcba
+\draw[color=snow] (3.5,1.5)-- (4.5,1.5) node [midway,below] {$a$};
+% abc - abac
+\draw[color=snow] (3.5,3.5)-- (4.5,3.5) node [midway,above] {$a$};
+% ab - aba
+\draw[color=snow] (3.5,4.5)-- (4.5,4.5) node [midway,below] {$a$};
+% bacba - bacb
+\draw[color=snow] (2,2)-- (2,3) node [midway,right] {$a$};
+% abacba - abacb
+\draw[color=snow] (3,2)-- (3,3) node [midway,left] {$a$};
+
+% c - e_A
+\draw[color=snow] (0,0)-- (0,5) node [midway,left] {$c$};
+% a - ac
+\draw[color=snow] (5,0)-- (5,5) node [midway,right] {$c$};
+% GENERATOR c
+% cb - bcb
+\draw[color=snow] (0.5,0.5)-- (0.5,1.5) node [midway,right] {$c$};
+% bc - b
+\draw[color=snow] (0.5,3.5)-- (0.5,4.5) node [midway,right] {$c$};
+% cba - bcba
+\draw[color=snow] (1.5,0.5)-- (1.5,1.5) node [midway,left] {$c$};
+% bac - ba
+%\draw[color=snow,dashed] (1.5,3.6)-- (1.5,4.4) node [midway,left,color=snow] {$c$};
+% acba - abcba
+\draw[color=snow] (3.5,0.5)-- (3.5,1.5) node [midway,right] {$c$};
+% abac - aba
+%\draw[color=snow, dashed] (3.5,3.5)-- (3.5,4.5) node [midway,right] {$c$};
+% acb - abcb
+\draw[color=snow] (4.5,0.5)-- (4.5,1.5) node [midway,left] {$c$};
+% abc - ab
+\draw[color=snow] (4.5,3.5)-- (4.5,4.5) node [midway,left] {$c$};
+% bacba - abacba
+\draw[color=snow] (2,2)-- (3,2) node [midway,above] {$c$};
+% bacb - abacb
+\draw[color=snow] (2,3)-- (3,3) node [midway,below] {$c$};
+
+% GENERATOR b
+% e - b
+\draw[color=snow] (0,5)-- (0.5,4.5) node [midway,below] {$b$};
+% bac - bacb
+%\draw[color=snow,dashed] (1.6,3.4)-- (1.9,3.1) node [near start,below,color=snow] {$b$};
+% bacba - bcba
+\draw[color=snow] (3,2)-- (3.5,1.5) node [near end,above] {$b$};
+% c - cb
+\draw[color=snow] (0,0)-- (0.5,0.5) node [midway,above] {$b$};
+% bcba - bacba
+\draw[color=snow] (1.5,1.5)-- (2,2) node [near start,above] {$b$};
+% abacb - abac
+\draw[color=snow] (3,3)-- (3.5,3.5) node [near end,below] {$b$};
+
+% a - ab
+\draw[color=snow] (5,5)-- (4.5,4.5) node [midway,below] {$b$};
+% ac - acb
+\draw[color=snow] (5,0)-- (4.5,0.5) node [midway,above] {$b$};
+
+% cba - acba
+\draw[color=snow] (1.5,0.5)-- (3.5,0.5) node [midway,below] {$b$};
+% ba - aba
+\draw[color=snow] (1.5,4.5)-- (3.5,4.5) node [midway,above] {$b$};
+% bcb - bc
+\draw[color=snow] (0.5,1.5)-- (0.5,3.5) node [midway,right] {$b$};
+% abcb - abc
+\draw[color=snow] (4.5,1.5)-- (4.5,3.5) node [midway,left] {$b$};
+
+%*************** nodos de la grafica *********************************
+
+% e_A - 1234
+\fill [color=cyan] (0,5) circle (3.5pt);
+\draw[color=snow] (0.2,5.2) node {$\overline{e_\mathcal{A}}$};
+
+% a - 2134
+\fill [color=cyan] (5,5) circle (3.5pt);
+\draw[color=snow] (4.8,5.2) node {$\overline{a}$};
+
+% c - 1243
+\fill [color=gray] (0,0) circle (3.5pt);
+\draw[color=snow] (0.2,-0.2) node {$\overline{c}$};
+
+% ac - 2143
+\fill [color=gold] (5,0) circle (3.5pt);
+\draw[color=snow] (4.8,-0.2) node {$\overline{ac}$};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% b - 1324
+\fill [color=gray] (0.5,4.5) circle (3.5pt);
+\draw[color=snow] (0.7,4.7) node {$\overline{b}$};
+
+% ab - 2314
+\fill [color=cyan] (4.5,4.5) circle (3.5pt);
+\draw[color=snow] (4.3,4.7) node {$\overline{ab}$};
+
+% cb - 1423
+\fill [color=gold] (0.5,0.5) circle (3.5pt);
+\draw[color=snow] (0.7,0.3) node {$\overline{cb}$};
+
+% acb - 2413
+\fill [color=gold] (4.5,0.5) circle (3.5pt);
+\draw[color=snow] (4.3,0.3) node {$\overline{acb}$};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ba - 3124
+\fill [color=gold] (1.5,4.5) circle (3.5pt);
+\draw[color=snow] (1.8,4.3) node {$\overline{ba}$};
+
+% aba - 3214
+\fill [color=cyan] (3.5,4.5) circle (3.5pt);
+\draw[color=snow] (3.1,4.3) node {$\overline{aba}$};
+
+% cba - 4123
+\fill [color=gold] (1.5,0.5) circle (3.5pt);
+\draw[color=snow] (1.85,0.7) node {$\overline{cba}$};
+
+% acba - 4213
+\fill [color=gold] (3.5,0.5) circle (3.5pt);
+\draw[color=snow] (3.05,0.7) node {$\overline{acba}$};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% bc - 1324
+\fill [color=gold] (0.5,3.5) circle (3.5pt);
+\draw[color=snow] (0.7,3.3) node {$\overline{bc}$};
+
+% abc - 2341
+\fill [color=cyan] (4.5,3.5) circle (3.5pt);
+\draw[color=snow] (4.2,3.3) node {$\overline{abc}$};
+
+% bcb - 1423
+\fill [color=gold] (0.5,1.5) circle (3.5pt);
+\draw[color=snow] (0.8,1.7) node {$\overline{bcb}$};
+
+% abcb - 2431
+\fill [color=gold] (4.5,1.5) circle (3.5pt);
+\draw[color=snow] (4.1,1.7) node {$\overline{abcb}$};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% bac - 3124
+% \node [circle, fill=gold, opacity=0.6] (bac) at (1.5,3.5) {};
+%\draw[color=snow] (1.9,3.6) node {$\overline{bac}$};
+
+% abac - 3241
+\fill [color=cyan] (3.5,3.5) circle (3.5pt);
+\draw[color=snow] (3,3.6) node {$\overline{abac}$};
+
+% bcba - 4132
+\fill [color=gold] (1.5,1.5) circle (3.5pt);
+\draw[color=snow] (1.95,1.4) node {$\overline{bcba}$};
+
+% abcba - 4231
+\fill [color=gold] (3.5,1.5) circle (3.5pt);
+\draw[color=snow] (2.95,1.4) node {$\overline{abcba}$};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% abacb - 3421
+\fill [color=gold] (3,3) circle (3.5pt);
+\draw[color=snow] (3.5,2.85) node {$\overline{abacb}$};
+
+% bacb - 3412
+\fill [color=gold] (2,3) circle (3.5pt);
+\draw[color=snow] (1.6,2.85) node {$\overline{bacb}$};
+
+% abacba - 4312
+\fill [color=gold] (3,2) circle (3.5pt);
+\draw[color=snow] (3.6,2.2) node {$\overline{abacba}$};
+
+% bacba - 4321
+\fill [color=gold] (2,2) circle (3.5pt);
+\draw[color=snow] (1.45,2.2) node {$\overline{bacba}$};
+
+\end{scriptsize}
+\end{tikzpicture}

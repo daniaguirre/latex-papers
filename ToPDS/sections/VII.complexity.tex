@@ -1,0 +1,50 @@
+ This section summarizes and
+compares the main proposals of generic routing for CGs. The routing schemes analyzed are the Routing based on Permutation Sort (RPS) \cite{nets_cg_model}, the Routing based on Chordal Ring Representation (RCRR) \cite{Tang92} and the Geometric Routing with Word-Metric Spaces (GRWMS) \cite{Camelo14}, which is extended and enhanced in this work. The comparison between the routing schemes was made  according to their complexity of memory space requirements and forwarding decision time.
+
+\subsection{Generic routing schemes for Cayley graphs}
+
+\subsubsection{Routing based on permutation sort (RPS)} 
+This scheme is supported on the Cayley's theorem, which states that every group is isomorphic to a subgroup of the symmetric group $Sym_p$. Then nodes in a CG of $Sym_p$, are labeled with arrays of the set $\{1,\ldots p\}$ representing elements of $Sym_p$ (see Section \ref{sec:2-WPapproach}). Therefore, a node label can be represented by $O(p\log(p))$ bits. 
+The connection rules between nodes are given by the set of permutations representing the generating set, thus the shortest path problem being equivalent to finding an optimal set of permutations that lead from a source node to a destination node. 
+
+This scheme follows a greedy routing strategy, where message headers are given by the label of the destination node, and the routing table of a node consists of the labels of its adjacent nodes. Therefore, the size of message headers and routing tables is $O(p\log(p))$ and $O(\Delta p\log(p))$ respectively. To forward packets, nodes compute the distance (in terms of the number of permutations) from each of its adjacent nodes to the destination node. 
+Then, packets are forwarded to the nearest node to the destination node. Assuming that comparing two node labels takes a total amount of time proportional to the label size, the forwarding decision takes $O(\Delta p log(p))$ time units.
+
+The RPS provides shortest-path routing, however, it does not provide multi-path routing and thus also does not provide fault-tolerance. As examples of this scheme, it can mention the schemes designed to work on Pancake, Star \cite{nets_cg_model}, Hypercube and Butterfly graphs \cite{hyp_but} respectively. 
+
+\subsubsection{Routing based on chordal ring representations (RCRR)}
+The RCRR takes as key idea that CG of Borel subgroups, also called Borel CG \cite{borel_cg,tang_topos,wsn_borel,exp_borel}, can be represented by Generalized Chordal Rings (GCR) \cite{Tang92}.
+In a GCR, nodes can be labeled with integers from $0$ to $n-1$, and there is a divisor $q$ of $n$ such that every two nodes $i$ and $j$ are connected if node $i + q$ module $n$ is connected to node $j + q$ module $n$.
+In the RCRR, nodes of a Borel CG are mapped to nodes of a GCR, then node labels are presented by $O(\log(n))$ bits. The static routing tables are constructed following the connection rules of the GCR as follows. The routing table of a node $i$ consists of an entry of $\Delta$ bits for each destination node and it is represented by $O(n\Delta)$. The $j$-th entry indicates the links that lead to the minimal paths from $i$ to $j$. The forwarding decision for single-path routing is taken identifying outgoing links for any incoming message, whose header consists of the destination label. It takes $O(1)$ time units.
+
+This routing scheme was extended in \cite{Tang_ft} to support link failures. In the new version, nodes incorporate a dynamic routing table that indicates the distances to destination nodes taking into account link failures. Therefore, a routing table is represented by $O(n\log(D))$. The routing process consists of two stages, the first one proceeds as explained above. The second stage begins when a node can no longer forward a packet due to failures. Then the packet is returned to the source node, which forwards it to links that lead to paths without link failures. Hence the forwarding decision takes $O(D)$ time units. In this case, message headers consists of the source and destination labels and the path history of nodes traversed by the packet being routed, thus it can be represented by $O(D\log(n))$ bits. 
+
+The scheme was evaluated through computer simulations on a Borel CG of 1081 nodes in a random failure scenario, where the percentage of link failures increases from $5\%$ to $35\%$  \cite{Tang_ft}. Results show that the scheme is not shortest path and packet delivery is not guaranteed in the range of $1\%$ to $32\%$ of all pairs of source-destination nodes.
+
+% ---------------------------------------------------------------------------
+% ----------------------- end of thesis sub-document ------------------------
+
+\subsubsection{Geometric routing with word-metric spaces (GRWMS)}
+
+The GRWMS applies techniques of word processing in groups presented in Section \ref{sec:2-WPapproach}. Thus node labels are given by words represented by $O(D\log(\Delta))$ bits. The GRWMS follows a greedy routing strategy similar to the RPS, where message headers consist of the label of the destination node and the routing table of a node consists of the labels of its adjacent nodes. To forward packets, nodes computes the shortest paths from each of its adjacent nodes to the destination node. Then, packets are forwarded to the nearest node to the destination. The shortest paths are computed as it is explained in Section \ref{sec:path_algorithms}, thereby the forwarding decisions are taken in time $O(\Delta D|Diff|)$ and the space complexity is $O(|Diff|)$.  As the RPS, the GRWMS provides shortest-path routing but it does not provide multi-path routing and fault-tolerance.
+
+\subsection{Comparison of routing schemes for Cayley graphs}
+
+\input{tables/comp_rs}
+
+Table \ref{tb:sch_comp} summarizes the features of the WPR and the routing schemes mentioned above. As is shown, the WPR is the only scheme that provides multi-path routing and thus fault-tolerance while packet delivery is guaranteed. Note that the RCRR was proposed as a fault-tolerant scheme \cite{Tang_ft}, although it does not guarantee packet delivery in failures scenarios.
+Thus the WPR is the most robust routing scheme among the analyzed ones.
+
+\input{tables/space_compl}
+
+Table \ref{tb:complexity} presents the complexity of memory space requirements and forwarding decision time for the analyzed schemes. The memory space requirements includes the size of message headers, node labels, routing tables and extra information that would be required in the routing process. 
+The RCRR has the highest memory space requirements as it requires full routing tables for static routing. While for fault-tolerant routing, it uses dynamic routing tables and adds the path history in the message header. 
+
+The memory space requirements for the rest of the analysed schemes depends on the CG family. In the case of RPS, its requirements depend on the symmetric group parameter, i.e. $p$, whose value varies in many families of CG used as model of communication networks. For instance in  Hypercubes and Bubble-sort graphs \cite{hyp_but}, the value of $p$ keeps low, i.e.  $p=O(\log(n))$. Meanwhile, the value $p$ is high for grid topologies, such as 2D-Torus graphs, where $p=O(\sqrt{n})$. As result, the RPS has the lowest space complexity in Hypercubes and Bubble-sort graphs and the highest space complexity in 2D-Torus graphs. Note that this scheme not require extra routing information due  to it does not provide fault-tolerance. 
+
+In the case of the GRWMS and the WPR, both schemes use the same message headers and routing information, except by the failure record used by the WPR to provide fault-tolerance. These schemes use the WDA, whose size, i.e. $|Diff|$, depends on the CG's family. In the worst case $|Diff|= O( \Delta n)$, however, $|Diff|$ keeps low for most families of CG used as model of communication networks. For instance, $| Diff | = O( \Delta)$ for Hypercubes and Bubble-sort graphs \cite{hyp_but}, while $| Diff | = O(1)$ for 2D-Torus graphs.
+
+Turning now to the complexity of the forwarding decision time, Table \ref{tb:complexity} shows the values for static routing (in modes single and multi-path) and fault-tolerant routing. Regarding to static routing in single-path mode, the RCRR takes forwarding decisions in constant time due to this scheme uses full routing tables. The RPS and GRWMS take forwarding decisions in time proportional to $p$ and $|Diff|$ respectively. Therefore, the GRWMS takes forwarding decisions faster than the RPS in Hypercubes, Bubble-sort and 2D-Torus graphs.
+Although the GRWMS and the WPR uses the same information for static routing, the WPR is faster than the GRWMS due to the WPR computes the routing paths just in source nodes, hence the forwarding decision time is constant in intermediate nodes. Meanwhile, the GRWMS computes the routing paths in source and intermediate nodes. In addition, the WPR is the only scheme, among the analyzed ones, that is able to perform static routing in mode multi-path.
+
+Regarding to the schemes that provides fault-tolerance, which are the WPR and the RCRR, the RCRR has the lowest forwarding decision time complexity that is proportional to $D$. However, it is important to recall that this scheme does not ensure the packet delivery in failure scenarios. In contrast, the forwarding decision of the WPR are taken in the same time for multi-path routing and fault-tolerant routing. In both cases, the packet delivery is guaranteed.

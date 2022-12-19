@@ -1,0 +1,36 @@
+%\begin{table*}[!t]
+%\begin{minipage}{\textwidth} 
+%\centering
+
+%\caption{Paths computed during the failure notification of  $\overline{bac}$}
+
+%\label{tb:paths_computed}
+\small
+\begin{tabular}{|c| c |c c| c c| c c|}
+\hline
+\rowcolor{gray!30}\multicolumn{1}{|c|}{{\textbf{Nodes sending}}}&\multicolumn{1}{c|}{{\textbf{Nodes receiving}}}&\multicolumn{2}{c|}{{\textbf{Notified}}}&\multicolumn{2}{c|}{{\textbf{Failures records}}}&\multicolumn{2}{c|}{{\textbf{Failures records}}}\\
+\rowcolor{gray!30}\multicolumn{1}{|c|}{{\textbf{the notification}}}&\multicolumn{1}{c|}{{\textbf{the notification}}}& \multicolumn{2}{c|}{{\textbf{failures}}} & \multicolumn{2}{c|}{{\textbf{after notifying}}} & \multicolumn{2}{c|}{{\textbf{before notifying}}}\\ 
+\hline
+\hline
+\rowcolor{gray!30}\multicolumn{1}{|c|}{\textbf{$\overline{v}$}}&\multicolumn{1}{c|}{\textbf{$\overline{u}$}}&$\mathcal{V}_v$&$\mathcal{E}_v$& $\mathcal{V}'_u$&$\mathcal{E}'_u$&$\mathcal{V}_u$&$\mathcal{E}_u$\\
+\hline
+  \hline
+\rowcolor{gray!10}\multirow{1}{*}{$\overline{aba}$}&\multirow{1}{*}{$\overline{ba}$}&$\{bac\}$&$\{(aba,abac)\}$ &$\{bac\}$ &$\emptyset$ &$\{bac\}$& $\emptyset$ \\
+\multirow{1}{*}{$\overline{aba}$}&\multirow{1}{*}{$\overline{ab}$}&$\{bac\}$&$\{(aba,abac)\}$&$\emptyset$ &$\emptyset$  &$\{bac\}$&$\{(aba,abac)\}$ \\
+\rowcolor{gray!10}\multirow{1}{*}{$\overline{abac}$}&\multirow{1}{*}{$\overline{abacb}$}&$\{bac\}$&$\{(aba,abac)\}$ &$\{bac\}$ &$\emptyset$ &$\{bac\}$& $\emptyset$ \\ 
+\multirow{1}{*}{$\overline{abac}$}&\multirow{1}{*}{$\overline{abc}$}&$\{bac\}$&$\{(aba,abac)\}$ &$\emptyset$ &$\emptyset$ &$\{bac\}$&$\{(aba,abac)\}$ \\
+\hline
+ \hline
+\rowcolor{gray!10}\multirow{1}{*}{$\overline{ab}$}&\multirow{1}{*}{$\overline{a}$}&$\{bac\}$&$\{(aba,abac)\}$ &$\emptyset$ &$\emptyset$ &$\{bac\}$& $\emptyset$ \\
+\multirow{1}{*}{$\overline{abc}$}&\multirow{1}{*}{$\overline{abcb}$}&$\{bac\}$&$\{(aba,abac)\}$ &$\emptyset$ &$\emptyset$ &$\emptyset$& $\emptyset$ \\
+\hline
+ \hline
+\rowcolor{gray!10}\multirow{1}{*}{$\overline{a}$}&\multirow{1}{*}{$\overline{e_\mathcal{A}}$}&$\{bac\}$&$\emptyset$ &$\emptyset$ &$\emptyset$ &$\{bac\}$& $\emptyset$ \\ 
+\multirow{1}{*}{$\overline{a}$}&\multirow{1}{*}{$\overline{ac}$}&$\{bac\}$&$\emptyset$ &$\emptyset$ &$\emptyset$ &$\emptyset$& $\emptyset$ \\ 
+\hline
+ \hline
+\multirow{1}{*}{$\overline{e_\mathcal{A}}$ }&\multirow{1}{*}{$\overline{b}$}&$\{bac\}$&$\emptyset$ &$\emptyset$ &$\emptyset$ &$\emptyset$& $\emptyset$\\ 
+ \rowcolor{gray!10}\multirow{1}{*}{$\overline{e_\mathcal{A}}$ }&\multirow{1}{*}{$\overline{c}$}&$\{bac\}$&$\emptyset$ &$\emptyset$ &$\emptyset$ &$\emptyset$& $\emptyset$\\\hline
+\end{tabular}
+%\end{minipage}
+%\end{table*}

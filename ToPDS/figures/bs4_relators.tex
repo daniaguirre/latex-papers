@@ -1,0 +1,18 @@
+\begin{figure*}[ht]
+\begin{minipage}{\textwidth} 
+\centering
+\subfloat[Propagation of discovering messages \texttt{DR}$_i$. The propagation starts at node $1$ that sends messages \texttt{DR}$_i$ through each of its ports $i$. Messages are spread at distance equal to the half of the largest relator length, i.e. $3$, and then returned to node $1$.]{\label{fig:6:bs_dr}{\input{figures/bs4_without_labels.tikz}}}
+\hspace{0.05\textwidth}
+\subfloat[ht][Matrix of paths reported to node $1$, i.e. $  P_1$. An element $p_{ij}\in  P_1$  denotes the $j$th path reported by \texttt{DR}$_i$.]{\label{fig:4:bs_nodes_fail_table}{\input{tables/bs4_pathsReported}}}
+
+\subfloat[Representation of the relators as cycles converging at the black node, which can be built from the reported paths. For example, the cycle corresponding to $ababab$ is built from $p_{aj},p_{bj} \in P$, such that $p_{aj}$ and $p_{bj}$ end at the same node, i.e. $p_{aj}3=p_{bj}3$. ]{\label{fig:6:bs_dr}{\input{figures/cycles.tikz}}}
+\hspace{0.05\textwidth}
+\subfloat[Table of relators and reported paths satisfying the condition condition to be part of a cycle corresponding to each relator.]{\label{fig:4:bs_nodes_fail_table}{\input{tables/discovered_paths.tex}}}
+ 
+\subfloat[Port label assignment according to cycles representing the relators that converge at node $1$]{\label{fig:6:bs_dr}{\input{figures/bs4_withLinkLabels_1.tikz}}}
+\hspace{0.05\textwidth}            
+\subfloat[Table of relators and its corresponding cycles, which are computed from reported paths.]{\label{fig:4:bs_nodes_fail_table}{\input{tables/reported_paths.tex}}}
+\caption{Process of searching cycles in $BS(4)$ corresponding to relators in $S<\{a,b,c\}|\{acac,ababab,bcbcbc\}>$. Three cycles are computed, which correspond to each relator and converge at node $1$.}
+\label{fig:bs_portLabel}
+\end{minipage}
+\end{figure*}
