@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: sn-article.aux
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+The style file: sn-apacite.bst
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: sn-bibliography.bib
+Warning--I didn't find a database entry for "dickison_magnani_rossi_2016"
+Warning--I didn't find a database entry for "vasilyeva2021"
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+ptr=1, stack=
+\APACrefbtitle {Personal académico de la UNAM.} {Personal académico de la unam.}
+---the literal stack isn't empty for entry AnuarioUNAM2021
+while executing---line 5353 of file sn-apacite.bst
+ptr=1, stack=
+\APACrefbtitle {Personal académico UAM.} {Personal académico uam.}
+---the literal stack isn't empty for entry AnuarioUAM2021
+while executing---line 5353 of file sn-apacite.bst
+ptr=1, stack=
+\APACrefbtitle {Personal docente del IPN.} {Personal docente del ipn.}
+---the literal stack isn't empty for entry AnuarioIPN2021
+while executing---line 5353 of file sn-apacite.bst
+You've used 16 entries,
+            7439 wiz_defined-function locations,
+            1460 strings with 13996 characters,
+and the built_in function-call counts, 28525 in all, are:
+= -- 3668
+> -- 202
+< -- 1221
++ -- 1254
+- -- 26
+* -- 1723
+:= -- 4898
+add.period$ -- 66
+call.type$ -- 16
+change.case$ -- 273
+chr.to.int$ -- 0
+cite$ -- 32
+duplicate$ -- 719
+empty$ -- 1259
+format.name$ -- 312
+if$ -- 5678
+int.to.chr$ -- 0
+int.to.str$ -- 48
+missing$ -- 0
+newline$ -- 397
+num.names$ -- 109
+pop$ -- 753
+preamble$ -- 1
+purify$ -- 63
+quote$ -- 0
+skip$ -- 1811
+stack$ -- 0
+substring$ -- 1393
+swap$ -- 402
+text.length$ -- 48
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1552
+warning$ -- 0
+while$ -- 120
+width$ -- 0
+write$ -- 480
+(There were 3 error messages)
